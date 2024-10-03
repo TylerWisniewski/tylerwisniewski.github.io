@@ -1,0 +1,49 @@
+---
+layout: post
+title: "Eddy Current Dynamometer Senior Design"
+background: '/images/portfolio/dyno/dyno-block.jpg'
+---
+
+<p>In my time on Cornell Electric Vehicles, I learned a lot (the hard way) about selecting the right motors. I wanted a way to test our motor's efficiency and 
+    encourage more testing of motors in the future.
+</p>
+
+<p>For this project, I was able to utilize design fundamentals, but also refresh my knowlegde of electricity and magnetism as well as do design optimization though MATLAB</p>
+
+<p>
+    Ultimately, this project won the 2024 Frank O. Ellendwood Prize for a senior project related to energy and power!
+</p>
+
+<h3>Basic Design</h3>
+
+<img class="img-fluid" src="images/portfolio/dyno/dyno-explode.jpg" alt="CAD Explosion">
+<span class="caption text-muted">Exploded view of the Dynamometer CAD</span>
+
+<p>
+    I researched three main types of dynamometers: a motor-driven dynamometer, a mechanical brake dynamometer, and lastly an Eddy Current dynamometer. I settled on an electromagnetic system because 
+    it was the most variable to use in testing motors aside from what we used on CEV. The braking force from the dynamometer could be controlled using electricity, which I felt would be easier to apply to different 
+    motors long-term, while also allowing me to explore an interest in magnets.
+</p>
+
+<p>
+    Eddy currents are closed loop currents which circulate within conductor materials in
+    response to changing magnetic fields. The direction of the induced current will oppose that of the
+    change in flux which caused it. I used this to design an electromagnetic break which would oppose the rotation of the motor- 
+    the power dissipated in the process could then be used to track motor efficiency depending on output. Starting with Ampere's law, I was able to correlate
+    eddy current forces and braking torque, the ultimate desired output.
+</p>
+
+<p>
+    I used Matlab calculations to decide what sized rotor and stator to use in order to get the max braking torque desired to match the current CEV motor. To vary the applied force, only the 
+    applied electricity would need to be changed, which could be done with a power supply.
+</p>
+
+<img class="img-fluid" src="images/portfolio/dyno/dyno-magnet.jpg" alt="CAD Explosion">
+<span class="caption text-muted">Individual Dynamometer Magnet</span>
+
+<h3>Technical Report</h3>
+<p>Unfortunately, I did not have the funds to be able to prorotype and eventually utilize this design. However, the entire proposed design is outlined in the report below.</p>
+
+<object data="images/portfolio/dyno/FINAL_VERSION_MAE 4291 Senior Design FA23 - Motor Dynamometer Final Report.pdf" type="application/pdf" width="80%" height="20%">
+    <p>Final Senior Design Report <a href="images/portfolio/dyno/FINAL_VERSION_MAE 4291 Senior Design FA23 - Motor Dynamometer Final Report.pdf">PDF</a></p>
+</object>
