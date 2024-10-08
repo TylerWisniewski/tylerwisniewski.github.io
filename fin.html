@@ -1,71 +1,55 @@
-﻿
-<!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en">
- <!--<![endif]-->
-<head>
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <title>Tyler Wisniewski</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
-    <!-- favicons
-     ================================================== -->
-    <link rel="icon" type="image/png" href="favicon.png">
-</head>
-<body id="top">
-    <!-- header
-    ================================================== -->
-    <header>
-        <div class="row">
-            <div class="top-bar">
-                <a class="menu-toggle" href="#"><span>Menu</span></a>
-                <div class="logo">
-                    <a href="index.html">Tyler Wisniewski</a>
-                </div>
-                <nav id="main-nav-wrap">
-                    <ul class="main-navigation">
-                        <li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
-                        <li><a class="smoothscroll" href="#about" title="">About</a></li>
-                        <li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
-                        <li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
-                        <li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
-                    </ul>
-                </nav>
-            </div> <!-- /top-bar -->
+﻿---
+layout: default
+---
 
-        </div> <!-- /row -->
-    </header> <!-- /header -->
-    ---
-    layout: post
-    title: "Wiski Fins: Carbon Fiber Surfboard Fins"
-    background: '/images/portfolio/fin.jpg'
-    ---
-    <h2 class="section-heading">Page Undr Development</h2>
-    <!-- footer
-       ================================================== -->
-    <div id="preloader">
-        <div id="loader"></div>
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+    {% else %}
+    <header class="masthead">
+        {% endif %}
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>{{ page.title }}</h1>
+                        {% if page.subtitle %}
+                        <h2 class="subheading">{{ page.subtitle }}</h2>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+
+                {{ content }}
+
+                <hr>
+
+                <div class="clearfix">
+
+                    {% if page.previous.url %}
+                    <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">
+                        &larr; Previous<span class="d-none d-md-inline">
+                            Post
+                        </span>
+                    </a>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">
+                        Next<span class="d-none d-md-inline">
+                            Post
+                        </span> &rarr;
+                    </a>
+                    {% endif %}
+
+                </div>
+
+            </div>
+        </div>
     </div>
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
