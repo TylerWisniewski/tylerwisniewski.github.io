@@ -196,11 +196,36 @@
          <p>
              I first analysed the aerodynamic performance of my fin under the extreme conditions of turning on a massive wave. As failure during this use case, would be the most catastrophic, I wanted to test 
              fin aerodynamic performance during this case, ensuring the surfer can still control their board and manuever properly. However, I also wanted to identify the pressure behvaior on the fin during this 
-             extreme circumstances. Thus, I exported the pressure information from Ansys Fluent and imported this into Ansys Mechanical
+             extreme circumstances. Thus, I exported the pressure information from Ansys Fluent and imported this into Ansys Mechanical. This allowed my to analysis to model the forces on the fin in a much more 
+             accurate manner.
                   
            </p>
+           <p>
+            Through my analysis, I found that the Fat Fin did not perform signifigantly betetr than the Skinny Fin during this analysis. At 25 m/s (~50mph) the Fat Fin generates 0.88 N of Drag force and 1.9 N of 
+            Lift. The Skinny Fin generates 0.92 N of Drag and 2.76 N of Lift. 
+            This result surprised me as the Cl/Cd information available
+            at airfoil tools showed otherwise. After confirming the Skinny Fin could withstand the loads during my extreme case with a FOS of 6.25, I decided to move forward with manufacturing my Skinny Fin Design.
+            This is particularly impactful as the volume of the Skinny Fin is ~½ that of the Fat Fin, resulting in ~50% reduction in material costs. 
 
+          </p>
 
+          <h3>Manufacturing</h3>
+
+         <p>
+             To achieve my goal of inexpensive carbon fiber (An Oxymoron) surfboard fins, I decided to manufacture these using the Forged Carbon Fiber Method. This method using chopped carbon fiber tow, an ambient-cure epoxy,
+             and a 3D Printed Mold. This method was developed my Lamborghini and I used the guide developed by Easy Composites, an absolutely amazing Composites Company and Youtube Channel. They output legitametly fantastic,
+             technical videos and I highly reccomend looking into their stuff. 
+         </p>
+         <p>
+            Accordingly, I designed Split Molds based off my fin design using lots of boolean tools, along with various offsets and addint draft angles and chamfers where necessary. I also added holes for whatever
+            mounting hardwear I could get my hands on. In this case, some larger than ideal bolts and nuts. To withstand the pressure during forging and demolding, I printed the molds at a high density infil of 75% 
+            and used PETG as the filament as it won't bind to the epoxy I'm using. 
+        </p>
+        <img class="img-fluid" src="images/portfolio/fin/layup.png" alt="CAD Explosion">
+        <span class="caption text-muted">Fin Layup
+
+            <img class="img-fluid" src="images/portfolio/fin/exam.png" alt="CAD Explosion">
+            <span class="caption text-muted">Fin Extraction
  </div>
  <div class="col-six tab-full">
     <img class="img-fluid" src="images/portfolio/fin/fin_specs.png" alt="CAD Explosion">
@@ -218,7 +243,8 @@
         <img class="img-fluid" src="images/portfolio/fin/fin_structural.png" alt="CAD Explosion">
         <span class="caption text-muted">Stress Analysis based on mapped Pressure Contours
         </span>
- 
+        <img class="img-fluid" src="images/portfolio/fin/tyler_fin.JPG" alt="CAD Explosion">
+        <span class="caption text-muted">The first Successful Fin Prototype!
         
 
      
