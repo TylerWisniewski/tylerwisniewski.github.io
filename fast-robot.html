@@ -188,6 +188,124 @@
 
         </div>
 
+		<div class="row section-intro">
+
+			<div class="col-twelve">
+	
+				<h1>Lab 1B</h1>
+					<h2>Prelab</h2>
+					<p>
+						For the pre-lab setup, we created a virtual environment, installed necessary Python libraries, and modified the UUID and MAC addresses as instructed to connect the Artemis board to our laptops
+					</p>
+					
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b1.PNG" alt="image">
+
+					<p>
+						I was able to identify the following configurations: artemis_address: 'c0:81:b4:22:28:64'
+
+						ble_service: '3d4053a2-f54c-40a2-ad6d-f0c26d2931ed'
+						
+						characteristics:
+						  TX_CMD_STRING: '9750f60b-9c9c-4158-b620-02ec9521cd99'
+						
+						  RX_FLOAT: '27616294-3063-4ecc-b60b-3470ddef2938'
+						  RX_STRING: 'f235a225-6735-4d73-94cb-ee5dfce9ba83'
+					</p>
+					<h2>ECHO </h2>
+					<p>
+						I created and tested the ECHO function.
+					</p>
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b2.PNG" alt="image">
+					<span class="caption text-muted">Arduino Code</span>
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b3.PNG" alt="image">
+					<span class="caption text-muted">Python Code</span>
+					
+					<h2>Get Time Millis </h2>
+					<p>
+						I created and tested the Get_Time_Millis function.
+					</p>
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b4.PNG" alt="image">
+					<span class="caption text-muted">Arduino Code</span>
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b5.PNG" alt="image">
+					<span class="caption text-muted">Python Code</span>
+
+					<h2>Notification Handler </h2>
+
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b6.PNG" alt="image">
+					<span class="caption text-muted">Python Code</span>
+
+					<h2>Live Sending Time Data for 5 seconds </h2>
+
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b7.PNG" alt="image">
+					<span class="caption text-muted">Arduino Code</span>
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b8.PNG" alt="image">
+					<span class="caption text-muted">Python Code</span>					
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b9.PNG" alt="image">
+					<span class="caption text-muted">Data Transfer Rate</span>
+
+					<h2>Sending Time Data for 5 seconds using Arrays </h2>
+
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b10.PNG" alt="image">
+					<span class="caption text-muted">Arduino Code</span>
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b11.PNG" alt="image">
+					<span class="caption text-muted">Python Code</span>			
+					
+					<h2>Sending Time and Temperature Data using Arrays </h2>
+
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b12.PNG" alt="image">
+					<span class="caption text-muted">Global Variables Code</span>
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b13.PNG" alt="image">
+					<span class="caption text-muted">Arduino Code</span>
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b14.PNG" alt="image">
+					<span class="caption text-muted">Python Code</span>	
+
+
+					<h2>Advantages and Disadvantages of Each Method </h2>
+					<p>
+						Each data transmission method has trade-offs. Sending datapoints live allows real-time monitoring, useful for debugging short operations. 
+						However, Bluetooth limitations cause data clipping, which is problematic for complex motions.
+
+						The array method, in contrast, enables rapid data storage and transfer, processing data efficiently via the notification handler. 
+						This is ideal for post-analysis, such as optimizing a stunt, flip, or other fast manuever.
+
+
+						The Artemis board has 384 kB of RAM (3,072,000 bits). At a 150 Hz sampling rate, 5 seconds of 16-bit values require 12,000 bits. 
+						This allows storing up to 256 such sets, assuming full memory availability. However, some of the memomry will be held by strings and the program so 
+						the capacity is less.
+					</p>
+
+
+					<h2> Effective Data Rate</h2>
+					<p>
+						To assess how message length impacts BLE data transfer rates, I developed a SEND_REPLIES command that accepts varies the message length from 
+						5-150 bytes and tracked the time it took to complete each message. I then plotted this relationship and shows an inverse correlation between the 
+						transfer rate and message length. I'd imagine that fast short messages have more overhead and that fewer, longer message are prefereable in this case.
+					</p>
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b15.PNG" alt="image">
+					<span class="caption text-muted">Arduino Code</span>
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b16.PNG" alt="image">
+					<span class="caption text-muted">Python Code</span>	
+					<img class="img-fluid" src="images\portfolio\fast-robot\1b17.PNG" alt="image">
+					<span class="caption text-muted">Plot</span>	
+
+					<h2> Effective Data Rate</h2>
+					<p>
+						Increasing the data transmission rate from the robot to the computer does not result in data loss. I verified this by sending an array of 
+						1,000 timestamped entries from the Artemis to the computer, all of which were successfully received. However, since the data points were 
+						floats, the lower overhead may have contributed to efficient transmission.
+					</p>
+					<h2> Discussion</h2>
+					<p>
+					I explored the Artemis board's onboard sensors and the use of Bluetooth for data transfer. It was particularly interesting to observe how the 
+					data rate varied based on the presence of print statements in both the Arduino and Python code. During Lab, I received help from and worked with Rachel Arena and Kelvin Resch. When stuck, I referenced Nila's site.
+					</p>
+
+
+
+
+	
+			</div>
+
 
            
 </section> <!--styles -->	
