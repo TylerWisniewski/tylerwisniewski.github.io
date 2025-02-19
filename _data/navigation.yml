@@ -1,12 +1,10 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://tylerwisniewski.github.io/docs/quick-start-guide/
+  - title: "Home"
+    url: https://tylerwisniewski.github.io/
   - title: "About"
-    url: https://mmistakes.github.io/minimal-mistakes/about/
-  - title: "Sample Posts"
-    url: /year-archive/
-  - title: "Sample Collections"
-    url: /collection-archive/
+    url: https://tylerwisniewski.github.io//about/
+  - title: "Resume"
+    url: /resume/
   - title: "Sitemap"
     url: /sitemap/
