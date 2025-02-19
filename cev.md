@@ -5,7 +5,7 @@ title: "Cornell Electric Vehicles md"
 background: '/images/portfolio/cev/cev-1.jpg'
 permalink: /cevmd/
 excerpt: "CEV excerpt"
-
+author_profile: true
 tags:
   - table of contents
 toc: true
