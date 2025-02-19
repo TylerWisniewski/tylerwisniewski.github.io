@@ -14,6 +14,19 @@ gallery:
     image_path: /images/portfolio/fin.png
     alt: "placeholder image 3"
     title: "Image 3 title caption"
+gallery2:
+    - url: /fast/
+      image_path: /images/portfolio/fast.gif
+      alt: "cev image"
+      title: "fast"
+    - url: /images/portfolio/zt.jpg
+      image_path: /images/portfolio/zt.jpg
+      alt: "placeholder image 2"
+      title: "Image 2 title caption"
+    - url: /images/portfolio/Mechatronics.JPG
+      image_path: /images/portfolio/Mechatronics.JPG
+      alt: "placeholder image 3"
+      title: "Image 3 title caption"
 ---
 
    <!-- about section
@@ -41,6 +54,7 @@ gallery:
        <h1>Projects</h1>
        <p>Click on an image for more information </p> 
        {% include gallery caption="This is a sample gallery with **Markdown support**." %}
+       {% include gallery id="gallery2" caption="This is a second gallery example with images hosted externally." %}
 
 
 
