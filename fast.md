@@ -1,7 +1,7 @@
 ---
 
 layout: posts
-title: "Fast Robots"
+title: "MAE 5190: Fast Robots"
 background: '/images/portfolio/cev/cev-1.jpg'
 permalink: /fast/
 excerpt: "Fast Robots"
@@ -15,7 +15,7 @@ gallery:
     image_path: /images/portfolio/fast.gif
     alt: "placeholder image 2"
     title: "Image 2 title caption"
-  - url: /images/portfolio/fin.png
+  - url: /lab3/
     image_path: /images/portfolio/fin.png
     alt: "placeholder image 3"
     title: "Image 3 title caption"
