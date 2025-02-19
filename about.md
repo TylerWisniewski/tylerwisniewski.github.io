@@ -1,4 +1,5 @@
 ---
+layout: posts
 permalink: /about/
 title: "About"
 excerpt: "About Tyler Wisniewski."
