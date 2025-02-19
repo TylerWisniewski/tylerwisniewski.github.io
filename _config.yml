@@ -12,7 +12,7 @@
 
 theme                  : #"minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    :  "dirt" #"default", "air", "aqua", "contrast", "dark", , "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    :  "default" #"default", "air", "aqua", "contrast", "dark", , "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Tyler Wisniewski"
   avatar           : "/images/profile-pic.jpg"
-  bio              : "I like to make things"
+  bio              : "Mechanical Engineering Student at Cornell university"
   location         : "Ithaca, NY"
   email            : "ttw24@cornell.edu"
   links:
