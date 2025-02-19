@@ -1,12 +1,12 @@
 # main links
 main:
-  - title: "Home"
+  - title: "Projects"
     url: https://tylerwisniewski.github.io/
   - title: "About"
     url: https://tylerwisniewski.github.io/about/
   - title: "Resume"
     url: https://tylerwisniewski.github.io/resume.pdf
-  - title: "Sample Collections"
-    url: /collection-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
   - title: "Sitemap"
     url: /sitemap/

@@ -6,12 +6,18 @@ background: '/images/portfolio/cev/cev-1.jpg'
 permalink: /cevmd/
 excerpt: "CEV excerpt"
 author_profile: true
-tags:
-  - table of contents
 toc: true
 toc_label: "Unique Title"
 toc_icon: "heart"
+
 ---
+<!-- <aside class="sidebar__right">
+<nav class="toc" markdown="1">
+<header><h4 class="nav__title"><i class="fas fa-{{ include.icon | default: 'file-alt' }}"></i> {{ include.title | default: site.data.ui-text[site.locale].toc_label }}</h4></header>
+*  Auto generated table of contents
+{:toc .toc__menu}
+</nav>
+</aside> -->
 
 # Begin Markdown text
 Cornell Electric Vehicles (CEV) is a fully student-run project team dedicated to building autonomous, hyper-efficient electric cars.  
