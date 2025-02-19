@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Tyler Wisniewski"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/profile-pic.jpg"
   bio              : "I like to make things"
   location         : "Ithaca, NY"
   email            : "ttw24@cornell.edu"
@@ -124,7 +124,7 @@ author:
       # url: "mailto:your.name@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      # url: "https://tylerwisniewski.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
