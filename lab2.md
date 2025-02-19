@@ -23,8 +23,6 @@ author_profile: true
 #### Accelerometer Data
 ```c
 case GET_IMU_DATA:{
-
-
           tx_estring_value.clear();
           Serial.println("Collect Data");
           // collect data
@@ -46,8 +44,6 @@ case GET_IMU_DATA:{
                   delay(1000/sampling_rate);  
                   Serial.println(i);
                 }
-
-
                 else{
                   // Low pass filter alpha deined in glob var (start at 0.2)
                   pitch_data[i] = alpha * pitch_a + (1 - alpha) * pitch_data[i-1];
@@ -56,20 +52,14 @@ case GET_IMU_DATA:{
                   //last_roll = roll_data[i];
                   time_sample[i] = (int) millis();
                   delay(1000/sampling_rate);  
-
-
                   Serial.println(i);
                 }
             }
-
-
-
 
             //Send array
             Serial.println("Send Data");
             int jMax= sizeof(time_sample);
                 for (int j = 0; j < cnt; j++) {
-                   
                     tx_estring_value.clear();
                     tx_estring_value.append(time_sample[j]);
                     tx_estring_value.append(" | ");
@@ -84,11 +74,7 @@ case GET_IMU_DATA:{
                     tx_characteristic_string.writeValue(tx_estring_value.c_str());
                     Serial.println(j);
                     //delay(10);
-
-
                 }
-
-
             break;
           }
 ```
@@ -137,5 +123,116 @@ case GET_IMU_DATA:{
 - Processed and analyzed accelerometer and gyroscope data.
 - Improved data transmission efficiency and stability.
 
----
 
+### Final Code
+```c
+        case GET_IMU_DATA:{
+        
+          tx_estring_value.clear();
+          float weight= 0.9;
+          unsigned long last_time=0;
+          Serial.println("Collect Data");
+          // collect data
+          for (int i = 0; i < cnt; i++) {
+              myICM.getAGMT();
+                pitch_a = atan2(myICM.accY(),myICM.accZ())*180/M_PI; 
+                roll_a  = -atan2(myICM.accX(),myICM.accZ())*180/M_PI;
+                
+                pitch_data_raw[i] = pitch_a;
+                roll_data_raw[i] = roll_a;
+
+                dt = (millis()-last_time)/1000.;
+                last_time = millis();
+                
+
+                Xm = myICM.magX();
+                Ym = myICM.magY();
+                Zm = myICM.magZ();
+                yaw_g = atan2(Xm,Ym)*180/M_PI;
+                yaw_data_raw[i] = yaw_g;
+                
+                if (i == 0) {
+                    // Low pass filter alpha deined in glob var (start at 0.07)
+                  pitch_data[i] = pitch_a ;
+                  roll_data[i] = roll_a ;
+
+                  pitch_g = pitch_a;
+                  roll_g = roll_a;
+
+                  p= pitch_a;
+                  r= roll_a;
+                  pitch_data_raw_g[i] = pitch_g;
+                  roll_data_raw_g[i] = roll_g;
+
+                  time_sample[i] = (int) millis();
+                  
+                  pitch_data_comp[i] = (1-weight)* (pitch_data_comp[i]+pitch_data_raw_g[i]) + (weight)* pitch_data[i]  ;
+                  roll_data_comp[i] = (1-weight)* (roll_data_comp[i]+roll_data_raw_g[i]) + (weight)* roll_data[i]  ;
+                  
+                  delay(1000/sampling_rate);  
+                  Serial.println(i);
+                }
+
+                else{
+                  
+                  // Low pass filter alpha deined in glob var (start at 0.2)
+                  pitch_data[i] = alpha * pitch_a + (1 - alpha) * pitch_data[i-1];
+                  roll_data[i] = alpha * roll_a + (1 - alpha) * roll_data[i-1];
+                  pa= alpha * pitch_a + (1 - alpha) * pitch_data[i-1];
+                  ra= alpha * roll_a + (1 - alpha) * roll_data[i-1];
+
+
+                  pitch_data_raw_g[i] = pitch_data_raw_g[i-1] + myICM.gyrX()*dt;
+                  roll_data_raw_g[i] = (roll_data_raw_g[i-1] + myICM.gyrY()*dt);
+  
+                  p= ((p - myICM.gyrY() * dt) * 0.9) + pa * (0.1);
+                  r= ((r + myICM.gyrX() * dt) * 0.9) + ra * (0.1);
+
+                  pitch_data_comp[i] = (1-weight)* (pitch_data_raw_g[i]) + (weight)* pitch_data[i]  ;
+                  roll_data_comp[i] = (1-weight)* (roll_data_raw_g[i]) + (weight)* roll_data[i]  ;
+
+
+                  time_sample[i] = (int) millis();
+                  delay(1000/sampling_rate);  
+
+                  Serial.println(i);
+                }
+            }
+
+
+            //Send array
+            Serial.println("Send Data");
+            int jMax= sizeof(time_sample);
+                for (int j = 0; j < cnt; j++) {
+                    
+                    tx_estring_value.clear();
+                    tx_estring_value.append(time_sample[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(pitch_data_raw[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(pitch_data[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(roll_data_raw[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(roll_data[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(pitch_data_raw_g[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(roll_data_raw_g[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(yaw_data_raw[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(pitch_data_comp[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(roll_data_comp[j]);
+                    //tx_estring_value.append(" | ");
+                    tx_characteristic_string.writeValue(tx_estring_value.c_str());
+                    Serial.println(j);
+                    //delay(50);
+
+                }
+
+            break;
+          }
+        
+```
