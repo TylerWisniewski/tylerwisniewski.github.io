@@ -4,8 +4,9 @@ permalink: /docs/pages/
 excerpt: "Suggestions and Front Matter defaults for working with pages."
 last_modified_at: 2016-11-03T11:13:12-04:00
 # author_profile: true
-margin: 20px;
 ---
+
+margin: 20px;
 
 To better organize all of your pages you can centralize them into a single location similar to posts and collections.
 
