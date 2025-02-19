@@ -1,10 +1,10 @@
 ---
 
 layout: posts
-title: "Cornell Electric Vehicles md"
+title: "Cornell Electric Vehicles"
 background: '/images/portfolio/cev/cev-1.jpg'
 permalink: /cev/
-excerpt: "CEV excerpt"
+excerpt: "Cornell Electric Vehicles Project Team"
 author_profile: true
 toc: true
 toc_label: "Unique Title"
@@ -55,9 +55,8 @@ For my senior design, I'm designing an autonomous Dihedral synchro-helix actuati
 *Chassis Surface Model for UC24*
 
 As Chassis Lead, I oversaw the manufacturing of the Monocoque and Aerodynamic Chassis Components for the UC24 vehicle, the Aerodynamic and Structural Design of the UC25 Chassis, and the integration process of all mechanical, electrical, and autonomy hardware systems.  
-Our UC24 Model was designed in Autodesk Inventor using Surfacing tools, but I led the switch to Autodesk Alias (a top Automotive Surface Modeling Program) for the design of the UC25 Vehicle.  
-Through an iterative design process, altering model parameters and analyzing aerodynamic performance using Ansys Fluent Computational Fluid Mechanics, I was able to reduce drag by 6% while also altering many parts for easier manufacturability with specific surfaces for Autonomous Sensor Mounting.  
-We then analyze and optimize our structural components using Ansys ACP and Mechanical.
+
+Our UC24 Model was designed in Autodesk Inventor using Surfacing tools, but I led the switch to Autodesk Alias (a top Automotive Surface Modeling Program) for the design of the UC25 Vehicle. Through an iterative design process, altering model parameters and analyzing aerodynamic performance using Ansys Fluent Computational Fluid Mechanics, I was able to reduce drag by 6% while also altering many parts for easier manufacturability with specific surfaces for Autonomous Sensor Mounting. We then analyzed and optimized our structural components/layups using Ansys ACP and Mechanical.
 
 ![UC24 Chassis Assembly](images/portfolio/cev/chassis.jpg)  
 *UC24 Chassis Assembly*
@@ -73,8 +72,9 @@ Impressed by my Computational Fluid Dynamic work for CEV, Dr. Bhaskaran and I ar
 ![UC25 CFD Analysis: Flow Visualization](images/portfolio/cev/flow_viz.png)  
 *UC25 CFD Analysis: Flow Visualization*
 
-This year, we're already underway for Chassis Manufacturing, preparing our Baseplate Mold for Layup via Vacuum Infusion in October and our Bulkhead for November.  
-Then, we'll manufacture all of our Aerodynamic Parts during JANFAB!
+This year, we're already underway for Chassis Manufacturing, preparing our Baseplate Mold for Layup via Vacuum Infusion in October and our Bulkhead for November. Then, we'll manufacture all of our Aerodynamic Parts during JANFAB!
+
+Based on learnings from our previous manufactyuring cycle, we've been able to reduce part weight signifiganytly, cutting material cost, and getting a much higher quality surface finish for our UC25 parts!
 
 ### Miscellaneous
 
@@ -82,7 +82,7 @@ Then, we'll manufacture all of our Aerodynamic Parts during JANFAB!
 *Bleeding Brakes @ the Indy 500 Raceway for Comp*
 
 ![upright](images/portfolio/cev/upright.JPG)  
-*Bleeding Brakes @ the Indy 500 Raceway for Comp*
+*I redesigned and machined our suspension uprights*
 
 ![Comp Waffle House Tradition](images/portfolio/cev/comp_wafflehouse.jpg)  
 *Maintaining the Comp Waffle House Tradition*
