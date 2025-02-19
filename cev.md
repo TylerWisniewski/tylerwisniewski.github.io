@@ -3,7 +3,7 @@
 layout: posts
 title: "Cornell Electric Vehicles md"
 background: '/images/portfolio/cev/cev-1.jpg'
-permalink: /cevmd/
+permalink: /cev/
 excerpt: "CEV excerpt"
 author_profile: true
 toc: true
