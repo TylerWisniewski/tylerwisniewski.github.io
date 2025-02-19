@@ -18,12 +18,10 @@ toc_icon: "heart"
 {:toc .toc__menu}
 </nav>
 </aside> -->
+Cornell Electric Vehicles (CEV) is a fully student-run project team dedicated to building autonomous, hyper-efficient electric cars. Our deeply knowledgeable interdisciplinary organization operates at the pace of a startup and has repeatedly produced industry-grade vehicles.  
 
-# Begin Markdown text
-Cornell Electric Vehicles (CEV) is a fully student-run project team dedicated to building autonomous, hyper-efficient electric cars.  
-Our deeply knowledgeable interdisciplinary organization operates at the pace of a startup and has repeatedly produced industry-grade vehicles.  
-Having placed highly at Shell Eco-Marathon Americas, we are a respected team operating at the limits of emergent technologies.  
-Endeavoring to integrate level 2 autonomy into our vehicles reflects our determination to continue forging at the leading edge of innovation.  
+Having placed highly at Shell Eco-Marathon Americas, we are a respected team operating at the limits of emergent technologies. Endeavoring to integrate level 2 autonomy into our vehicles reflects our determination to continue forging at the leading edge of innovation.  
+
 Our team's website is [https://www.cornellelectricvehicles.org/](https://www.cornellelectricvehicles.org/).
 
 ## Projects
@@ -34,21 +32,19 @@ Our team's website is [https://www.cornellelectricvehicles.org/](https://www.cor
 ### Leadership Responsibilities
 
 As the Full Team Lead, I am in charge of 65+ students and responsible for the vehicle's Mechanical, Electrical, Data Acquisition and Analysis, and Autonomous systems.  
+
 To keep things running smoothly, myself and subteam leads set up weekly system meetings and preliminary, critical, alumni, and final design reviews to provide consistent and widespread technical feedback.  
 We also keep the team organized with both full-team GANTT charts and individual work logs. Also, I redesigned our CAD sharing system and our documentation protocols to push for more consistent documentation to aid future members.
 
-I worked with the other team leads (Mechanical, Electrical, Data A&A, Autonomy, Operations) to ensure smooth design and manufacturing of all systems, testing procedures, and vehicle integration.  
-Excellent time management and communication skills were key to helping this team run smoothly and efficiently!
+I worked with the sub-team leads (Mechanical, Electrical, Data A&A, Autonomy, Operations) to ensure smooth design and manufacturing of all systems, testing procedures, and vehicle integration.Excellent time management and communication skills were key to helping this team run smoothly and efficiently!
 
 #### Additional Roles
 
-In addition to my role as Team Lead this year, I am also serving as Machining Lead and completing my Senior Design for CEV.  
-As 1 of 10 Undergraduate students selected to become a "Blue Apron" (the highest level of Machining Mastery at Cornell) last year, I'm the most senior machinist on our team and I have 200+ hours in the shop.  
-Not only am I in charge of red-lining and validating all shop drawings for our team's packed manufacturing cycle and redesigning dozens of parts to be more manufacturable, but I'm also the sole individual responsible for all of our CNC Machined parts.  
-This includes our wheel hubs, steering knuckles, axle supports, driveshafts, and more!
+In addition to my role as Team Lead this year, I am also serving as Machining Lead and completing my Senior Design for CEV. As 1 of 10 Undergraduate students selected to become a "Blue Apron" (the highest level of Machining Mastery at Cornell) last year, I'm the most senior machinist on our team and I have 200+ hours in the shop.  
 
-For my senior design, I'm designing an autonomous Dihedral synchro-helix actuation door system for our upcoming vehicle.  
-This involves mechanical design, manufacturing, sensor integration, and PCB design.
+Not only am I in charge of red-lining and validating all shop drawings for our team's packed manufacturing cycle and redesigning dozens of parts to be more manufacturable, but I'm also the sole individual responsible for all of our CNC Machined parts. This includes our wheel hubs, steering knuckles, axle supports, driveshafts, and more!
+
+For my senior design, I'm designing an autonomous Dihedral synchro-helix actuation door system for our upcoming vehicle. This involves mechanical design, manufacturing, sensor integration, and PCB design.
 
 ![Technical Inspection](images/portfolio/cev/comp_tech.JPG)  
 *A photo of me and some team members with the car before heading into (and Passing!) technical inspection at the Shell Eco Marathon.*
@@ -83,6 +79,9 @@ Then, we'll manufacture all of our Aerodynamic Parts during JANFAB!
 ### Miscellaneous
 
 ![Bleeding Brakes](images/portfolio/cev/comp_brakes.jpg)  
+*Bleeding Brakes @ the Indy 500 Raceway for Comp*
+
+![upright](images/portfolio/cev/upright.JPG)  
 *Bleeding Brakes @ the Indy 500 Raceway for Comp*
 
 ![Comp Waffle House Tradition](images/portfolio/cev/comp_wafflehouse.jpg)  
