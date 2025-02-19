@@ -1,6 +1,19 @@
 ---
 layout: collection
 author_profile: true
+gallery:
+  - url: /images/portfolio/CEV.jpg
+    image_path: /images/portfolio/CEV.jpg
+    alt: "cev image"
+    title: "CEV"
+  - url: /images/portfolio/gmd.jpg
+    image_path: /images/portfolio/gmd.jpg
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
+  - url: /images/portfolio/fin.png
+    image_path: /images/portfolio/fin.png
+    alt: "placeholder image 3"
+    title: "Image 3 title caption"
 ---
 
    <!-- about section
@@ -10,7 +23,6 @@ author_profile: true
    	<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>About</h5>
    			<h1>Let me introduce myself</h1>
 
    			<div class="intro-info">
@@ -24,6 +36,8 @@ author_profile: true
 
    		</div>   		
    	</div> <!-- /section-intro -->
+
+       #{% include gallery caption="This is a sample gallery with **Markdown support**." %}
 
    	<div class="row about-content">
 
