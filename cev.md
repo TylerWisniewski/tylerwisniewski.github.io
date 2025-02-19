@@ -9,7 +9,19 @@ author_profile: true
 tags:
   - table of contents
 toc: true
-toc_sticky: true
+toc_label: "Unique Title"
+toc_icon: "heart"
+---
+
+Enable table of contents on post or page by adding `toc: true` to its YAML Front Matter. The title and icon can also be changed with:
+
+```yaml
+---
+toc: true
+toc_label: "Unique Title"
+toc_icon: "heart"  # corresponding Font Awesome icon name (without fa prefix)
+---
+```
 ---
 
 <p>
