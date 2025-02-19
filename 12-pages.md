@@ -4,6 +4,10 @@ permalink: /docs/pages/
 excerpt: "Suggestions and Front Matter defaults for working with pages."
 last_modified_at: 2016-11-03T11:13:12-04:00
 # author_profile: true
+tags:
+  - table of contents
+toc: true
+toc_sticky: true
 ---
 
 margin: 20px;
