@@ -5,10 +5,8 @@ permalink: /early/
 author_profile: true
 ---
 
-# Early Projects  
-
 A collection of projects I've worked on, growing up in the **Wisniewski Household** with the family motto:  
-*"If Dad's working, we're all working."*  
+> If Dad's working, you're working.  
 
 ---
 
