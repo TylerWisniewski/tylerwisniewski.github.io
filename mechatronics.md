@@ -6,8 +6,6 @@ excerpt: "make robot gather cubes :)"
 author_profile: true
 ---
 
-# Mechatronics Robot Project  
-
 ![Our robot, Salamence!](images/portfolio/mechatronics/tech_irl.JPG)  
 *Our robot, Salamence! He is fierce*  
 

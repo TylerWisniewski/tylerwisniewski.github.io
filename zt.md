@@ -1,12 +1,11 @@
 ---
 layout: posts
-title: "ZT Nano Heat Energy Lab"
+title: "ZT Group"
 permalink: /zt/
 excerpt: "Summer Research with ZT Group"
 author_profile: true
 ---
 
-# ZT Group  
 
 ## Nano Heat Energy Research Laboratory at Cornell University  
 

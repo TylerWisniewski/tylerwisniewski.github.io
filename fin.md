@@ -24,7 +24,6 @@ Initially a gift for my younger brother, I optimized surfboard fins for his size
 ## Personal Background  
 
 ![Me and Nicky](images/portfolio/fin/nicky.jpg)  
-<img src="images/portfolio/fin/nicky.jpg" width="200">
 
 My little brother, Nicky, and I have been going to the beach our whole lives. Over the years, we've built award-winning sandcastles, bodyboarded with dolphins, established a rainbow-loom bracelet empire, and of course, surfed! Ever since I left for college in 2021, Nick has been surfing even more and was looking into some board upgrades. Unfortunately, **FCS and Futures have a complete monopoly on the fin market**, making a good set of carbon fiber fins cost around **$150**.  
 
@@ -41,8 +40,6 @@ Given my experience working with **carbon fiber and FEA analysis** through my pr
 3. **Conduct more CFD and Structural Analysis on Surfboard Fins than seemingly anyone else before.**  
 4. **Manufacture the fins myself at low cost.**  
 5. **Complete all of this while working full-time during my internship at General Motors.**  
-
-**Seems easy, right?**  
 
 ---
 
@@ -126,8 +123,6 @@ To withstand **forging pressure and demolding**, I printed the molds with **75% 
 ## **Conclusion**  
 
 What started as a **birthday gift** for my brother turned into a **fully engineered, tested, and manufactured** surfboard fin business. We've optimized **performance through CFD and FEA**, successfully **manufactured fins at a fraction of market prices**, and even started selling them to **local surfers and shops**.  
-
-As we continue refining designs and production, **Wiski Fins** is **riding the wave to the next level!** 🌊🏄‍♂️  
 
 ---
 
