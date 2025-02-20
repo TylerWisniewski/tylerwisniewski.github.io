@@ -116,6 +116,9 @@ I designed **split molds** based on my fin model, using:
 
 To withstand **forging pressure and demolding**, I printed the molds with **75% infill using PETG filament**, which also **prevents binding to the epoxy**.  
 
+{% include gallery  %}
+*Mold Design*
+
 ![First Successful Prototype](images/portfolio/fin/tyler_fin.JPG)  
 *The first successful fin prototype!*  
 
