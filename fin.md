@@ -4,6 +4,15 @@ title: "Wiski Fins"
 permalink: /fin/
 excerpt: "I designed and manufactured my own Carbon Fiber Surfboard Fins as a gift for my little brother"
 author_profile: true
+gallery:
+        - url: /images/portfolio/fin/mold.png
+          image_path: /images/portfolio/fin/mold.png
+          alt: "cev image"
+          title: "Mold exp"
+        - url: /images/portfolio/fin/mold2.png
+          image_path: /images/portfolio/fin/mold2.png
+          alt: "placeholder image 2"
+          title: "Mold Close"
 ---
 # Wiski Fins
 
@@ -57,6 +66,9 @@ After establishing my **master model**, I created my fins using **surface modeli
 ![Fin Design Parameters](images/portfolio/fin/fin_specs.png)  
 *General Fin Design Parameters. I created a Master Model based on these parameters for rapid design iteration! I currently alter my designs based on airfoil type and base length.*  
 
+![Fin Render](images/portfolio/fin/render.png)  
+*Fin CAD Render*  
+
 ![Zebra Analysis](images/portfolio/fin/zebra.png)  
 *Zebra analysis of surface demonstrates G2 continuity throughout the fin, ensuring smooth fluid flow over the surface.*  
 
@@ -76,6 +88,9 @@ These results **surprised me**, as the **Cl/Cd ratios from airfoil tools** sugge
 
 ![CFD and Structural Workflow](images/portfolio/fin/fin_wb.png)  
 *Ansys Workbench Workflow: CFD Analysis in Fluent and then mapping pressure contours into Ansys Mechanical for Structural Analysis.*  
+
+![Fluid Flow around Fin](images/portfolio/fin/streamline.png)  
+*Velocity Streamlines of the water in Ansys Fluent.*  
 
 ![Pressure Contours](images/portfolio/fin/pressure_cont.png)  
 *Pressure contours of the fin in Ansys Fluent.*  
