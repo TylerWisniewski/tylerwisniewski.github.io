@@ -14,14 +14,6 @@ gallery:
           alt: "placeholder image 2"
           title: "Mold Close"
 ---
-# Wiski Fins
-
-## Introduction
-
-### Wiski Fins  
-**Carbon Fiber Surfboard Fins**
-
----
 
 ## What is Wiski Fins?
 
@@ -32,6 +24,7 @@ Initially a gift for my younger brother, I optimized surfboard fins for his size
 ## Personal Background  
 
 ![Me and Nicky](images/portfolio/fin/nicky.jpg)  
+<img src="images/portfolio/fin/nicky.jpg" width="200">
 
 My little brother, Nicky, and I have been going to the beach our whole lives. Over the years, we've built award-winning sandcastles, bodyboarded with dolphins, established a rainbow-loom bracelet empire, and of course, surfed! Ever since I left for college in 2021, Nick has been surfing even more and was looking into some board upgrades. Unfortunately, **FCS and Futures have a complete monopoly on the fin market**, making a good set of carbon fiber fins cost around **$150**.  
 
