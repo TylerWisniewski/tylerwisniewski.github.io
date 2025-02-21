@@ -10,7 +10,7 @@ toc: true
 
 ## Who am I?
 
-This is some information about Tyler Wisniewski.
+Hi, I'm Tyler an Early MEng stduent at Cornell studying Mechanical Engineering. I'm very active on campus participating in and holding leadership positions in the following organizations on campus. 
 
 ## Campus Involvements
 
@@ -35,5 +35,3 @@ This is some information about Tyler Wisniewski.
 ## Other stuff I like to do
 snowboard, surf, read, ect. Right now I'm readin Dune (book 3) and absolutely loving it!
 
-## Course Enrollement
-classes 
