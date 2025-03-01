@@ -145,14 +145,115 @@ void loop() {
 Since Both TOF Sensors have the same default address, I manually changed one of the addresses, by turning off one of the TOF sensors using the X-Shut Pin, rewriting one of the addresses, and then turning it back on. 
 
 
+```cpp
+#include <Wire.h>
+#include "SparkFun_VL53L1X.h" //Click here to get the library: http://librarymanager/All#SparkFun_VL53L1X
+
+//Optional interrupt and shutdown pins.
+#define SHUTDOWN_PIN 0
+#define INTERRUPT_PIN 3
+
+SFEVL53L1X distanceSensor1;
+SFEVL53L1X distanceSensor2;
+
+//Uncomment the following line to use the optional shutdown and interrupt pins.
+//SFEVL53L1X distanceSensor(Wire, SHUTDOWN_PIN, INTERRUPT_PIN);
+
+void setup(void)
+{
+    Serial.begin(115200);
+
+    Wire.begin();
+    Wire.setClock(400000);
+
+      
+      pinMode(SHUTDOWN_PIN, OUTPUT);
+      digitalWrite(SHUTDOWN_PIN,0);
+
+      Wire.begin();
+
+      distanceSensor1.init();
+
+      //Shut down first sensor, change address
+      distanceSensor1.setI2CAddress(0x54);
+
+      if (distanceSensor1.begin() != 0) //Begin returns 0 on a good init
+      {
+      Serial.println("First sensor failed to begin...");
+      while (1)
+          ;
+      }
+      Serial.println("Sensor 1 online!");
+      delay(1000);
+      digitalWrite(SHUTDOWN_PIN,1);  
+
+      if (distanceSensor2.begin() != 0)  //Begin returns 0 on a good init
+      {
+      Serial.println("Second sensor failed to begin...");
+      while (1)
+          ;
+      }
+      Serial.println("Sensor 2 online!");
+
+      distanceSensor1.setDistanceModeShort();
+      distanceSensor2.setDistanceModeShort();
+}
+
+void loop(void)
+{
+    distanceSensor1.startRanging(); //Write configuration bytes to initiate measurement
+    distanceSensor2.startRanging(); //Write configuration bytes to initiate measurement
+
+    while (!distanceSensor1.checkForDataReady())
+    {
+      delay(1);
+    }
+    while (!distanceSensor2.checkForDataReady())
+    {
+      delay(1);
+    }
+
+    int distance1 = distanceSensor1.getDistance(); //Get the result of the measurement from the sensor
+    distanceSensor1.clearInterrupt();
+    distanceSensor1.stopRanging();
+    int distance2 = distanceSensor2.getDistance(); //Get the result of the measurement from the sensor
+    distanceSensor2.clearInterrupt();
+    distanceSensor2.stopRanging();
+
+    Serial.print("Distance1(mm): ");
+    Serial.print(distance1);
+    Serial.print(" Distance2(mm): ");
+    Serial.print(distance2);
+
+    float distanceInches1 = distance1 * 0.0393701;
+    float distanceFeet1 = distanceInches1 / 12.0;
+
+    float distanceInches2 = distance2 * 0.0393701;
+    float distanceFeet2 = distanceInches2 / 12.0;
+
+    Serial.print("\tDistance(ft): ");
+    Serial.print(distanceFeet1, 2);
+
+    
+    Serial.print("\tDistance(ft): ");
+    Serial.print(distanceFeet2, 2);
+
+    Serial.println();
+}
+
+```
+*Code Snippet 2: Arduino code to scan and list distances read by both ToF sensors*
+
+![I2C Scan Output](/images/portfolio/fast-robot/3twoTof.png)  
+*Figure 4: Screenshot showing the output of above code* 
 
 ### ToF Sensor Modes and Data
-The ToF sensor supports three distance modes: Short (1.3m), Medium (3m), and Long (4m). The default is Long mode.
+The ToF sensor supports three distance modes: Short (1.3m), Medium (3m), and Long (4m). The default is Long mode. I wanted to set a baseline for data precision so I'm using the short mode.
 
 ```cpp
-sensor.setDistanceModeLong(); // Set sensor to long-distance mode
+sensor.setDistanceModeShort(); // Set sensor to long-distance mode
 ```
-*Code Snippet 2: Setting ToF sensor to long-distance mode.*
+*Code Snippet 2: Setting ToF sensor to Short-distance mode.*
 
 I tested the sensor accuracy and range in different lighting conditions. The results are shown below.
 
