@@ -248,114 +248,288 @@ void loop(void)
 *Figure 4: Screenshot showing the output of above code* 
 
 ### ToF Sensor Modes and Data
-The ToF sensor supports three distance modes: Short (1.3m), Medium (3m), and Long (4m). The default is Long mode. I wanted to set a baseline for data precision so I'm using the short mode.
+The ToF sensor supports three distance modes: Short (1.3m), Medium (3m), and Long (4m). The default is Long mode. Since our robots move quickly, I decided to use long mode.
 
 ```cpp
-sensor.setDistanceModeShort(); // Set sensor to long-distance mode
+sensor.setDistanceModeLong(); // Set sensor to long-distance mode
 ```
-*Code Snippet 2: Setting ToF sensor to Short-distance mode.*
+*Code Snippet 2: Setting ToF sensor to long-distance mode.*
 
-I tested the sensor accuracy and range in different lighting conditions. The results are shown below.
+I tested the sensor accuracy and range by moving a platform in 10 cm increments over time.
 
-![ToF Sensor Data](./images/tof_data_plot.png)  
+![ToF Data Collection Setup](/images/portfolio/fast-robot/3setup.jpg)  
+*Figure 5: Data Collection Setup*
+
+```cpp
+        case GET_TOF_DATA:{
+          // setup
+          Wire.begin();
+          Wire.setClock(400000);
+
+            
+            pinMode(SHUTDOWN_PIN, OUTPUT);
+            digitalWrite(SHUTDOWN_PIN,0);
+
+            Wire.begin();
+
+            distanceSensor1.init();
+
+            //Shut down first sensor, change address
+            distanceSensor1.setI2CAddress(0x54);
+
+            if (distanceSensor1.begin() != 0) //Begin returns 0 on a good init
+            {
+            Serial.println("First sensor failed to begin...");
+            while (1)
+                ;
+            }
+            Serial.println("Sensor 1 online!");
+            delay(1000);
+            digitalWrite(SHUTDOWN_PIN,1);  
+
+            if (distanceSensor2.begin() != 0)  //Begin returns 0 on a good init
+            {
+            Serial.println("Second sensor failed to begin...");
+            while (1)
+                ;
+            }
+            Serial.println("Sensor 2 online!");
+
+            distanceSensor1.setDistanceModeShort();
+            distanceSensor2.setDistanceModeShort();
+
+
+          //data collection
+                    
+          tx_estring_value.clear();
+          Serial.println("Collect Data");
+          // collect data
+          for (int i = 0; i < cnt; i++) {
+                distanceSensor1.startRanging(); //Write configuration bytes to initiate measurement
+                distanceSensor2.startRanging(); //Write configuration bytes to initiate measurement
+
+                while (!distanceSensor1.checkForDataReady())
+                {
+                  delay(1);
+                }
+                while (!distanceSensor2.checkForDataReady())
+                {
+                  delay(1);
+                }
+
+                distance1[i] = distanceSensor1.getDistance(); //Get the result of the measurement from the sensor
+                distanceSensor1.clearInterrupt();
+                distanceSensor1.stopRanging();
+
+                distance2[i] = distanceSensor2.getDistance(); //Get the result of the measurement from the sensor
+                distanceSensor2.clearInterrupt();
+                distanceSensor2.stopRanging();
+
+
+                time_sample[i] = (int) millis();
+                // delay(1000/sampling_rate);  
+
+                Serial.println(i);
+                
+            }
+
+
+          // send data
+          Serial.println("Send Data");
+            int jMax= sizeof(time_sample);
+                for (int j = 0; j < cnt; j++) {
+                    
+                    tx_estring_value.clear();
+                    tx_estring_value.append(time_sample[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(distance1[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(distance2[j]);
+                    //tx_estring_value.append(" | ");
+                    tx_characteristic_string.writeValue(tx_estring_value.c_str());
+                    Serial.println(j);
+                  }
+          }
+
+```
+*Code Snippet 3: ToF Data Collection*
+
+![ToF Sensor Data](/images/portfolio/fast-robot/3plot.png)  
 *Figure 4: Distance measurements over time, showing sensor accuracy and repeatability.*
 
 ### Using Two ToF Sensors and IMU Simultaneously
-To use both sensors and the IMU in parallel, I ensured the code does not hang while waiting for measurements. Instead, it checks for new data asynchronously.
+To use both sensors I scanned for distance and then imu right after. I used to have a delay function built in for imu sensing, but that's no longer necessary since the ToF sensors are slow.
 
 ```cpp
-void loop() {
-    if (distanceSensor1.checkForDataReady()) {
-        int distance1 = distanceSensor1.getDistance();
-        Serial.print("Sensor 1: ");
-        Serial.println(distance1);
-    }
-    
-    if (distanceSensor2.checkForDataReady()) {
-        int distance2 = distanceSensor2.getDistance();
-        Serial.print("Sensor 2: ");
-        Serial.println(distance2);
-    }
-}
+        case GET_TOF_AND_IMU_DATA:{
+           // setup
+            pinMode(SHUTDOWN_PIN, OUTPUT);
+            digitalWrite(SHUTDOWN_PIN,0);
+
+            distanceSensor1.init();
+            //Shut down first sensor, change address
+            distanceSensor1.setI2CAddress(0x54);
+            if (distanceSensor1.begin() != 0) //Begin returns 0 on a good init
+            {
+              Serial.println("First sensor failed to begin...");
+              while (1);
+            }
+            Serial.println("Sensor 1 online!");
+            delay(100);
+            digitalWrite(SHUTDOWN_PIN,1);  
+
+            if (distanceSensor2.begin() != 0)  //Begin returns 0 on a good init
+            {
+              Serial.println("Second sensor failed to begin...");
+              while (1);
+            }
+            Serial.println("Sensor 2 online!");
+
+            distanceSensor1.setDistanceModeShort();
+            distanceSensor2.setDistanceModeShort();
+
+
+          //data collection
+                    
+          tx_estring_value.clear();
+          Serial.println("Collect Data");
+          // collect data
+          for (int i = 0; i < cnt; i++) {
+                distanceSensor1.startRanging(); //Write configuration bytes to initiate measurement
+                distanceSensor2.startRanging(); //Write configuration bytes to initiate measurement
+
+                while (!distanceSensor1.checkForDataReady())
+                {
+                  delay(1);
+                  
+                }
+                while (!distanceSensor2.checkForDataReady())
+                {
+                  delay(1);
+                }
+
+                distance1[i] = distanceSensor1.getDistance(); //Get the result of the measurement from the sensor
+                Serial.println("distance 1 collected");
+
+                distanceSensor1.clearInterrupt();
+                distanceSensor1.stopRanging();
+
+                distance2[i] = distanceSensor2.getDistance(); //Get the result of the measurement from the sensor
+                Serial.println("distance 2 collected");
+
+                distanceSensor2.clearInterrupt();
+                distanceSensor2.stopRanging();
+
+
+                // collect imu data +
+                myICM.getAGMT();
+                Serial.println("get AGMT");
+
+                pitch_data_raw[i] = atan2(myICM.accY(),myICM.accZ())*180/M_PI; 
+                roll_data_raw[i] = -atan2(myICM.accX(),myICM.accZ())*180/M_PI;
+                Serial.println("got pitch roll");
+
+                  dt = (millis()-last_time)/1000.;
+                  last_time = millis();
+                   Serial.println("got time");
+
+         
+                yaw_data_raw[i] = atan2(myICM.magX(),myICM.magY())*180/M_PI;
+                Serial.println("get yaw");
+
+                // Low pass filter alpha deined in glob var (start at 0.2)
+                pitch_data[i] = alpha * pitch_data_raw[i] + (1 - alpha) * pitch_data[i];
+                roll_data[i] = alpha * roll_data_raw[i] + (1 - alpha) * roll_data[i];
+
+                pitch_data_raw_g[i] = pitch_data_raw_g[i] + myICM.gyrX()*dt;
+                roll_data_raw_g[i] = (roll_data_raw_g[i] + myICM.gyrY()*dt);
+
+                pitch_data_comp[i] = (1-weight)* (pitch_data_raw_g[i]) + (weight)* pitch_data[i]  ;
+                roll_data_comp[i] = (1-weight)* (roll_data_raw_g[i]) + (weight)* roll_data[i]  ;
+                Serial.println("get comp");
+
+                time_sample[i] = (int) millis();
+                Serial.println("get time");
+                Serial.println(i);
+                
+                
+            }
+
+
+          // send data
+          Serial.println("Send Data");
+                for (int j = 0; j < cnt; j++) {
+                    
+                    tx_estring_value.clear();
+                    tx_estring_value.append(time_sample[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(yaw_data_raw[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(pitch_data_comp[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(roll_data_comp[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(distance1[j]);
+                    tx_estring_value.append(" | ");
+                    tx_estring_value.append(distance2[j]);
+
+                    //tx_estring_value.append(" | ");
+                    tx_characteristic_string.writeValue(tx_estring_value.c_str());
+                    Serial.println(j);
+                  }
+          }
 ```
-*Code Snippet 3: Non-blocking code to read both ToF sensors only when new data is available.*
+*Code Snippet 3: Code to read ToF and IMU data*
+
+![ToF Sensor Data](/images/portfolio/fast-robot/3iandt.png)  
+*Figure 5: Distance measurements and IMU measurements over time*
 
 ### Measuring Execution Speed and Limiting Factor
-To determine the execution speed, I measured loop timing.
+To determine the execution speed, I measured timing between sensor readings and grouped them into buckets.
 
+![hist 2](/images/portfolio/fast-robot/3hist2.png)  
+*Figure 6: Timing Histogram for base IMU and TOF code*
+
+I'm going to try optimizing the code by removing my debugging statements and lowering the intermeasurement period. Based on the library examples and documentation, it seems like 20ms is the minimum and 100ms is the default. 
 ```cpp
-unsigned long lastTime = micros();
+  distanceSensor1.setIntermeasurementPeriod(20);
+  distanceSensor2.setIntermeasurementPeriod(20);
+``` 
 
-void loop() {
-    unsigned long currentTime = micros();
-    Serial.print("Loop time (us): ");
-    Serial.println(currentTime - lastTime);
-    lastTime = currentTime;
-}
-```
-*Code Snippet 4: Measuring loop execution time using microsecond precision.*
+![hist 2](/images/portfolio/fast-robot/3hist3.png)  
+*Figure 6: Timing Histogram for **Optimized** IMU and TOF code*
 
-The primary limiting factor is the sensor's measurement time, which depends on the selected distance mode.
-
-![Loop Execution Speed](./images/loop_timing.png)  
-*Figure 5: Graph showing loop execution speed, highlighting ToF sensor response time.*
-
-### Recording ToF and IMU Data Over Bluetooth
-I modified the Lab 1 code to log time-stamped ToF and IMU data, which is transmitted via Bluetooth.
-
-```cpp
-void sendData() {
-    Serial.print(millis());
-    Serial.print(",");
-    Serial.print(distanceSensor1.getDistance());
-    Serial.print(",");
-    Serial.println(IMU.readAccelerationX());
-}
-```
-*Code Snippet 5: Logging and transmitting ToF and IMU data over Bluetooth.*
-
-#### Time vs. Distance Plot
-![Time vs. Distance](./images/time_vs_distance.png)  
-*Figure 6: ToF sensor distance measurements over time, captured and plotted from Bluetooth data.*
-
-#### Time vs. Angle Plot (IMU)
-![Time vs. Angle](./images/time_vs_angle.png)  
-*Figure 7: IMU angle measurements over time, highlighting motion data from the robot.*
+While the optmiized code noticibly improved performance, I wonder if I can do better. I suspect that the sensors are waiting their intermeasurement periods in series rather than in parallel. If this is the case, I could hopefully reduce sensing time by ~50%. I will look into this further
 
 ---
 
 ## Additional Discussion (5000-Level Tasks)
 
 ### Infrared-Based Distance Sensors
-There are several types of infrared-based distance sensors, including:
-1. **VL53L1X (Time-of-Flight):** Measures distance using the time taken for light pulses to reflect off objects.
-2. **IR Reflective Sensors:** Measure intensity of reflected light, useful for close-range detection but prone to environmental interference.
-3. **Ultrasonic Sensors:** Emit sound waves instead of light, useful in dark environments but slower than ToF sensors.
 
-| Sensor Type     | Range   | Speed | Environmental Sensitivity |
-|----------------|--------|-------|--------------------------|
-| VL53L1X (ToF)  | 4m     | Fast  | Affected by reflectivity  |
-| IR Reflective  | 10cm   | Fast  | Affected by surface color |
-| Ultrasonic     | 3m     | Slow  | Affected by soft surfaces |
+Infrared-based distance sensors determine distance by emitting IR waves and detecting reflections. Traditional IR sensors use triangulation, measuring reflection angles for short-range applications. ToF sensors, in contrast, measure laser pulse timing for greater accuracy, making them ideal for robotics and gesture recognition. LiDAR, another IR-based technology, offers even higher precision for mapping and autonomous navigation but is significantly more expensive.
+
+| Sensor Type     | Range   | Speed | Environmental Sensitivity  | Price       |
+|----------------|--------|-------|---------------------------|-------------|
+| VL53L1X (ToF)  | 4m     | Fast  | Affected by reflectivity   | $5 - $10    |
+| IR Reflective  | 10cm   | Fast  | Affected by surface color  | $1 - $5     |
+| LiDAR          | 100m+  | Fast  | Affected by fog and rain   | $100+       |
 
 *Table 1: Comparison of different infrared-based distance sensors.*
 
+Each sensor type varies in precision, cost, and environmental suitability, making them ideal for different applications.
+
+
 ### Sensitivity to Colors and Textures
-To test color and texture sensitivity, I measured distances to different surfaces.
+To test color and texture sensitivity, I measured distances to different surfaces. A piece of cardboard, a semi-reflective metal weight, and a soft cloth. I measured them all ~500mm away from the sensors and cycled cardboard>metal>cloth>cardboard. 
 
-| Surface Type  | Measured Distance (cm) | Expected Distance (cm) |
-|--------------|-----------------------|-----------------------|
-| White Paper  | 50                    | 50                    |
-| Black Cloth  | 35                    | 50                    |
-| Shiny Metal  | 52                    | 50                    |
+![hist 2](/images/portfolio/fast-robot/3test.JPG)  
+*Figure 7: Test Items*
 
-*Table 2: ToF sensor measurements against different surfaces.*
+![hist 2](/images/portfolio/fast-robot/3plot2.png)  
+*Figure 7: Test Results*
 
-Results show that dark, non-reflective surfaces can reduce the effective range of the ToF sensor.
+Results show that semi-reflective surfaces and soft surfaces didn't actually impact the distance sensors too much. This was very surprising to me.
 
----
+I wanted to also test how to sensor reacts to hot surfaces using a blowtorch. Responsible student Kelvin Resch dissuaded me from this experiment. He is a paragon of responsible action and is a model student. 
 
-## Conclusion
-In this lab, I successfully connected and tested two VL53L1X ToF sensors alongside an IMU. I explored sensor accuracy, execution speed, and Bluetooth data transmission. The choice of sensor mode and placement significantly impacts obstacle detection. Additionally, I investigated the limitations of ToF sensors regarding color and texture sensitivity.
-
-```
