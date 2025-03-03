@@ -9,26 +9,26 @@ author_profile: true
 gallery:
   - url: /lab1/
     image_path: /images/portfolio/fast-robot/lab1.png
-    alt: "cev image"
+    alt: "lab 1"
     title: "Lab 1 A/B"
   - url: /lab2/
     image_path: /images/portfolio/fast.gif
-    alt: "placeholder image 2"
-    title: "Image 2 title caption"
+    alt: "Lab 2"
+    title: "Lab 2"
   - url: /lab3/
-    image_path: /images/portfolio/fin.png
-    alt: "placeholder image 3"
-    title: "Image 3 title caption"
+    image_path: /images/portfolio/fast-robot/3tof.jpg
+    alt: "Lab 3"
+    title: "Lab 3"
 gallery2:
-  - url: /lab1/
+  - url: /lab4/
     image_path: /images/portfolio/fast-robot/lab1.png
-    alt: "cev image"
-    title: "Lab 1 A/B"
-  - url: /lab2/
+    alt: "Lab 4"
+    title: "Lab 4"
+  - url: /lab5/
     image_path: /images/portfolio/fast.gif
     alt: "placeholder image 2"
     title: "Image 2 title caption"
-  - url: /images/portfolio/fin.png
+  - url: /lab6
     image_path: /images/portfolio/fin.png
     alt: "placeholder image 3"
     title: "Image 3 title caption"
