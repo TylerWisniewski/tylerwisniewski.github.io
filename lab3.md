@@ -18,21 +18,6 @@ gallery:
     title: "Image 3 title caption"
 ---
 
-## Objective
-The purpose of this lab is to equip the robot with distance sensors. The faster the robot can sample and the more it can trust a sensor reading, the faster it is able to drive.
-
-## Parts Required
-- 1 x SparkFun RedBoard Artemis Nano  
-- 1 x USB cable  
-- 2 x 4m ToF sensor  
-- 1 x 9DOF IMU sensor  
-- 1 x QWIIC Breakout board  
-- 3 x Qwiic connector  
-- 1 x 650mAh battery from the RC car  
-- 1 x Ruler or graph paper  
-- 1 x Wire strippers/Mini cutters  
-- 1 x Soldering iron  
-
 ## Prelab
 
 ### I2C Sensor Address
