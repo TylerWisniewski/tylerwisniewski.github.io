@@ -84,6 +84,7 @@ void loop() {
 *Motor Driver 1 PWM Test*
 
 [![motor driver pwm](https://img.youtube.com/vi/OzV-J_2ymuw/0.jpg)](https://youtu.be/OzV-J_2ymuw)
+
 *Motor Driver 2 PWM Test*
 
 
@@ -129,6 +130,7 @@ void loop() {
 *Figure 3: Motor verification code*  
 
 [![motor spin](https://img.youtube.com/vi/JpSDfULQdWg/0.jpg)](https://youtu.be/JpSDfULQdWg)
+
 *Motor unloaded test* 
 
 ---
@@ -194,6 +196,7 @@ void loop() {
 *Figure 5: drive straight code*  
 
 [![motor spin](https://img.youtube.com/vi/SS3PvwV291I/0.jpg)](https://youtu.be/SS3PvwV291I)
+
 *Motor unloaded test* 
 
 ---
@@ -202,6 +205,7 @@ void loop() {
 
 Through tests, I was able to execute a pretty good 180 degree turn.
 [![drive](https://img.youtube.com/vi/ukf2_dHecmk/0.jpg)](https://youtu.be/ukf2_dHecmk)
+
 *more open loop driving* 
 
 ```c
