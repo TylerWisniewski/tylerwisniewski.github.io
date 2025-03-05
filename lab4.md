@@ -77,7 +77,7 @@ void loop() {
   }
 }
 ```
-* PWM incrementing test code*  
+*PWM incrementing test code*  
 
 [![motor driver pwm](https://img.youtube.com/vi/hfOLPyt_C_4/0.jpg)](https://youtu.be/hfOLPyt_C_4)
 
@@ -204,6 +204,7 @@ void loop() {
 ## More Open Loop control
 
 Through tests, I was able to execute a pretty good 180 degree turn.
+
 [![drive](https://img.youtube.com/vi/ukf2_dHecmk/0.jpg)](https://youtu.be/ukf2_dHecmk)
 
 *more open loop driving* 
