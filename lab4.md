@@ -79,8 +79,12 @@ void loop() {
 ```
 * PWM incrementing test code*  
 
-[![Blink Video](https://img.https://youtu.be/hfOLPyt_C_4)](https://youtu.be/hfOLPyt_C_4)
+[![motor driver pwm](https://img.youtube.com/vi/hfOLPyt_C_4/0.jpg)](https://youtu.be/hfOLPyt_C_4)
 
+*Motor Driver 1 PWM Test*
+
+[![motor driver pwm](https://img.youtube.com/vi/OzV-J_2ymuw/0.jpg)](https://youtu.be/OzV-J_2ymuw)
+*Motor Driver 2 PWM Test*
 
 
 ---
@@ -90,53 +94,68 @@ void loop() {
 After soldering, I confirmed that each motor functioned properly by applying power and running the following test script:  
 
 ```cpp
+#define motor1a 2
+#define motor1b 3
+
+#define motor2a 5
+#define motor2b 6
+
+
 void setup() {
-    pinMode(4, OUTPUT);
-    pinMode(5, OUTPUT);
-    pinMode(0, OUTPUT);
-    pinMode(1, OUTPUT);
+  Serial.begin(115200);
+  pinMode(motor1a, OUTPUT);
+  pinMode(motor1b, OUTPUT);
+  analogWrite(motor1a,0);
+  analogWrite(motor1b,0);
+
+  pinMode(motor2a, OUTPUT);
+  pinMode(motor2b, OUTPUT);
+  analogWrite(motor2a,0);
+  analogWrite(motor2b,0);
+  delay(5000);
 }
 
 void loop() {
-    analogWrite(4, 0);
-    analogWrite(5, 200);
-    delay(5000);
-    analogWrite(4, 0);
-    analogWrite(5, 0);
+
+    analogWrite(motor1a,200);
+    analogWrite(motor2b,0);
+    delay(1000);
+
+    analogWrite(motor1a,0);
+    analogWrite(motor2b,200);
+    delay(1000); 
 }
 ```
 *Figure 3: Motor verification code*  
 
-**Observation:**  
-- The robot required **40-45 PWM** to overcome static friction with a fresh battery.  
-- A worn battery increased the minimum required PWM to **50-65**.  
-- **Turning required ~70 PWM** to start from rest.  
+[![motor spin](https://img.youtube.com/vi/JpSDfULQdWg/0.jpg)](https://youtu.be/JpSDfULQdWg)
+*Motor unloaded test* 
 
 ---
 
 ## Open Loop Control  
 
 ### Installation  
-I integrated all components, ensuring **braided cables** to reduce noise and securing wires with zip ties. I mounted **one TOF sensor in the front and one in the back**, allowing 360° coverage with a **180° rotation**.  
+I integrated all components, ensuring **braided cables** to reduce noise and securing wires with tape. I mounted **one TOF sensor in the front and one in the side**.  
 
-![Robot Wiring](path/to/robot-wiring.png)  
+![Wiring Diagram](/images/portfolio/fast-robot/4label.png)  
 *Figure 4: Fully wired robot*  
 
 ### System Drift  
-To evaluate drift, I ran the robot **forward at 120 PWM for ~3 seconds**. The expected distance was **6ft (2m)**, but the robot veered **right by ~1ft** at the **4.5-5ft mark**.  
+To evaluate drift, I ran the robot foward, varying time and PWM signal around a dozen times
 
 ### Adding a Calibration Constant  
-To compensate for drift, I introduced a **calibration factor** to adjust the left motor's PWM. I manually tuned this value since using the IMU would make the system **closed-loop**. The final calibration factor was **1.6**, which significantly reduced drift.  
+To compensate for drift, I introduced a **calibration factor** to adjust the left motor's PWM. I manually tuned this value through trial and error. The final calibration factor was **0.82**, which significantly reduced drift.  
 
 ```cpp
 #define motor1a 2
 #define motor1b 3
-#define m1pwm 44
+#define m1pwm 45
 
 
 #define motor2a 5
 #define motor2b 6
-#define m1pwm 44
+#define m2pwm 55
 
 
 void setup() {
@@ -155,26 +174,10 @@ void setup() {
 
 void loop() {
 
-  // for (int i = 0; i < 15; i++) {
-  //   //right wheels
-  //   analogWrite(motor2a,0);
-  //   analogWrite(motor2b,50-(2*i));
-  //   Serial.println(100-(2*i));
-  //   // analogWrite(motor2a,45-(i*2));
-  //   // analogWrite(motor2b,0);
-  //   delay(200);
-
-  //   analogWrite(motor2a,0);
-  //   analogWrite(motor2b,0);
-
-  //   // analogWrite(motor2a,0);
-  //   // analogWrite(motor2b,0);
-  //   delay(2000);
-  // }
   analogWrite(motor1a,0);
-  analogWrite(motor1b,45);
+  analogWrite(motor1b,m1pwm);
 
-  analogWrite(motor2a,55);
+  analogWrite(motor2a,m2pwm);
   analogWrite(motor2b,0);
 
   delay(2800);
@@ -190,21 +193,16 @@ void loop() {
 ```
 *Figure 5: drive straight code*  
 
-import drive straight video
+[![motor spin](https://img.youtube.com/vi/SS3PvwV291I/0.jpg)](https://youtu.be/SS3PvwV291I)
+*Motor unloaded test* 
+
 ---
 
-<!-- ## Challenges & Debugging  
+## More Open Loop control
 
-### Pin 5 Issue  
-One motor **stopped and stuttered** after **1 second** despite a 3-second command. I traced this to **Pin 5’s solder joint**, which had a **small gap** preventing a reliable connection.  
-
-**Debugging Steps:**  
-- Checked connections with a multimeter  
-- Tested pins in isolation  
-- Rewired motor drivers for reduced interference  
-- Reheated solder joints to improve connections  
-
-After fixing the solder, **the problem was resolved**.   -->
+Through tests, I was able to execute a pretty good 180 degree turn.
+[![drive](https://img.youtube.com/vi/ukf2_dHecmk/0.jpg)](https://youtu.be/ukf2_dHecmk)
+*more open loop driving* 
 
 ```c
 // perftect 180 turn
@@ -281,6 +279,7 @@ void loop() {
 }
 ```
 ---
+
 ## 5000 Level Tasks
 ### Consider what frequency analogWrite generates. Is this adequately fast for these motors? Can you think of any benefits to manually configuring the timers to generate a faster PWM signal?
 

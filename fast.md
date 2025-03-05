@@ -21,7 +21,7 @@ gallery:
     title: "Lab 3"
 gallery2:
   - url: /lab4/
-    image_path: /images/portfolio/fast-robot/lab1.png
+    image_path: /images/portfolio/fast-robot/4md.jpg
     alt: "Lab 4"
     title: "Lab 4"
   - url: /lab5/
