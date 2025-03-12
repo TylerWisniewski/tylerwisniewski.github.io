@@ -51,7 +51,7 @@ case STOP_PID:
             analogWrite(motor2b,0);
 }
 ```
-Figure 1: PID BLE control
+*Figure 1: PID BLE control*
 
 Additionally, I implemented a helper function for driving in a straight line. I also added a stop driving variation if I set dir=0 or at least not +/-1:
 ```c
@@ -176,7 +176,7 @@ I also added a lengthy delay to the end so I can pick up and turn off my car. Fo
 *Pretty good with Kp=0.05* 
 
 ![ToF+pwm plot](/images/portfolio/fast-robot/5plot.png)  
-*Figure 3: Plot of ToF and PWM vs time*
+*Figure 4: Plot of ToF and PWM vs time*
 
 
 
@@ -192,7 +192,7 @@ errI= (int) errI+ err*pid_dt;
 
 pwm= (int) (kp*errP)+(ki*errI);
 ```
-*Figure 4: Initial Integral control implementation*
+*Figure 5: Initial Integral control implementation*
 
 [![p control](https://img.youtube.com/vi/x51RdSmZnjo/0.jpg)](https://youtu.be/x51RdSmZnjo)
 
@@ -205,14 +205,14 @@ Eventually I found and fixed my bug, but then got hit with some strong integrato
 *Integrator Windup* 
 
 ![ToF+pwm plot](/images/portfolio/fast-robot/5windup.png)  
-*Figure 5: Plot of ToF and PWM vs time showcasing Integrator Windup*
+*Figure 6: Plot of ToF and PWM vs time showcasing Integrator Windup*
 
 I set Ki = 0.01 to minimize steady-state error without significantly slowing down the system. However, even with this small value, windup grew rapidly. Thus I implemented a limit on the I term at +/- 150. (**5000 level task**).
 
 [![pi control](https://img.youtube.com/vi/UbTOTI80DhU/0.jpg)](https://youtu.be/UbTOTI80DhU)
 
 ![PI plot](/images/portfolio/fast-robot/5pi.png)  
-*Figure 6: Plot of ToF and PWM vs time showcasing PI control*
+*Figure 7: Plot of ToF and PWM vs time showcasing PI control*
 
 I'm not convinced that PI is actually helping for this use case as it seems to have amplified the oscillatory behavior. Depending on future lab goals, I may try to stick with well-tuned P-control. This needs further testing. 
 
@@ -220,24 +220,52 @@ I'm not convinced that PI is actually helping for this use case as it seems to h
 The ToF sensor was configured to operate in long-distance mode (up to 3.6 meters) and the control loop ran every ~20-40 ms, ensuring timely updates to the motor PWM values.
 
 ![PI plot](/images/portfolio/fast-robot/5time.png)  
-*Figure 7: Histogram of Loop time intervals*
+*Figure 8: Histogram of Loop time intervals*
 
 The bulk of the loops took around 20-40 ms which is the minimun timing budget available for our ToF sensors, so I don't think I can reasonably increase my speed beyond this limit since I'm currently waiting to begin each new loop until I have ToF data ready. However, this may be alleviated with linear extrapolation.
 
 ### Linear Extrapolation
-I implemented linear extrapolation to estimate the robot's position when new ToF data was not available. This allowed the control loop to run faster than the ToF sensor's sampling rate:
+I implemented linear extrapolation to estimate the robot's position when new ToF data was not available. This allowed the control loop to run much faster than the ToF sensor's sampling rate:
 
 ```c
-if(i > 1) {
-  float d1 = distance1_data[i-2]; float d2 = distance1_data[i-1];
-  float t1 = time_data[i-2]; float t2 = time_data[i-1];
-  float dxdt = (d2 - d1) / (t2 * 0.001 - t1 * 0.001);
-  float dx = dxdt * (millis() - t2);
-  float error = (d2 + dx) - TARGET;
-  float pwm = Kp * error;
-}
+ while (currMillisTOF - prevMillisTOF <= 10000) {
+              distanceSensor1.startRanging();
+
+              if (distanceSensor1.checkForDataReady()) {
+                //normal pid
+
+              }
+              else if(count > 2){
+                  count++;
+                  float d1 = TOF_array[count-2]; 
+                  float d2 = TOF_array[count-1];
+                  float t1 = time_array[count-2]; 
+                  float t2 = time_array[count-1];
+
+                  float dxdt = (d2-d1)/(t2/1000-t1/1000);
+                  float dx = dxdt * (millis()-t2);
+                  float errP = (d2+dx) - targetDist;
+
+                  // Serial.print("slope: ");
+                  // Serial.print(dxdt);
+                  // Serial.println(" | ");
+
+                  //Proportional Control
+                  int pwm = kp * errP;
+                  time_array[count] = (int)millis();
+                  TOF_array[count] = 0;
+                  
+                }
+                
+                //send pwm to motors
+ }
 ```
-*Figure 8: Linear extrapolation implementation*
+*Figure 9: Linear extrapolation implementation*
+
+![PI plot](/images/portfolio/fast-robot/5interp.png)  
+*Figure 10: Histogram of Loop time intervals with Linear Extrapolation*
+
+The loop speed become way faster which is great. Unfortunately, the PID controller didn't work as well as the previous versions so I'm not sure I'll use this method for further testing.
 
 ## Conclusion
 This lab provided hands-on experience with PID control and highlighted the importance of tuning gains, managing sampling rates, and implementing safeguards like integrator windup protection. The robot successfully stopped at the target distance of 304 mm from the wall, demonstrating the effectiveness of the PI controller.
