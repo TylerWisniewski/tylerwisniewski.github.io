@@ -21,6 +21,8 @@ gallery:
 ## Prelab
 The purpose of this lab was to implement closed loop control through PID controllers. The state I controlled was speed, and I used the TOF sensors to stop a set distance from the wall. PID stands for proportional, integral, derivative control. 
 
+![ToF+pwm plot](/images/portfolio/fast-robot/5pid.jpg)  
+
 $$ u(t)= k_p * e(t) + k_i * \int_0^t e(t) dt + k_d  *\frac{d }{dt}e(t)$$
 
 ### Bluetooth Communication Setup

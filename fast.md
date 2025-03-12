@@ -25,9 +25,9 @@ gallery2:
     alt: "Lab 4"
     title: "Lab 4"
   - url: /lab5/
-    image_path: /images/portfolio/fast.gif
+    image_path: /images/portfolio/fast-robot/5pid.jpg
     alt: "placeholder image 2"
-    title: "Image 2 title caption"
+    title: "PID Control"
   - url: /lab6
     image_path: /images/portfolio/fin.png
     alt: "placeholder image 3"
