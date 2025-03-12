@@ -231,7 +231,7 @@ The ToF sensor was configured to operate in long-distance mode (up to 3.6 meters
 ![PI plot](/images/portfolio/fast-robot/5time.png)  
 *Figure 8: Histogram of Loop time intervals*
 
-The bulk of the loops took around 20-40 ms which is the minimun timing budget available for our ToF sensors, so I don't think I can reasonably increase my speed beyond this limit since I'm currently waiting to begin each new loop until I have ToF data ready. However, this may be alleviated with linear extrapolation.
+The bulk of the loops took around 20-40 ms which is the minimum timing budget available for our ToF sensors, so I don't think I can reasonably increase my speed beyond this limit since I'm currently waiting to begin each new loop until I have ToF data ready. However, this may be alleviated with linear extrapolation.
 
 ### Linear Extrapolation
 I implemented linear extrapolation to estimate the robot's position when new ToF data was not available. This allowed the control loop to run much faster than the ToF sensor's sampling rate:
