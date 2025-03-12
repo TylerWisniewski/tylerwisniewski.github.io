@@ -33,16 +33,11 @@ Our team's website is [https://www.cornellelectricvehicles.org/](https://www.cor
 
 As the Full Team Lead, I am in charge of 65+ students and responsible for the vehicle's Mechanical, Electrical, Data Acquisition and Analysis, and Autonomous systems.  
 
-To keep things running smoothly, myself and subteam leads set up weekly system meetings and preliminary, critical, alumni, and final design reviews to provide consistent and widespread technical feedback.  
-We also keep the team organized with both full-team GANTT charts and individual work logs. Also, I redesigned our CAD sharing system and our documentation protocols to push for more consistent documentation to aid future members.
+To keep things running smoothly, myself and subteam leads set up weekly system meetings and preliminary, critical, alumni, and final design reviews to provide consistent and widespread technical feedback. We also keep the team organized with both full-team GANTT charts and individual work logs. Also, I redesigned our CAD sharing system and our documentation protocols to push for more consistent documentation to aid future members.
 
 I worked with the sub-team leads (Mechanical, Electrical, Data A&A, Autonomy, Operations) to ensure smooth design and manufacturing of all systems, testing procedures, and vehicle integration.Excellent time management and communication skills were key to helping this team run smoothly and efficiently!
 
-#### Additional Roles
-
-In addition to my role as Team Lead this year, I am also serving as Machining Lead and completing my Senior Design for CEV. As 1 of 10 Undergraduate students selected to become a "Blue Apron" (the highest level of Machining Mastery at Cornell) last year, I'm the most senior machinist on our team and I have 200+ hours in the shop.  
-
-Not only am I in charge of red-lining and validating all shop drawings for our team's packed manufacturing cycle and redesigning dozens of parts to be more manufacturable, but I'm also the sole individual responsible for all of our CNC Machined parts. This includes our wheel hubs, steering knuckles, axle supports, driveshafts, and more!
+In addition to my role as Team Lead this year, I am also love machining and I'm completing my Senior Design for CEV. As 1 of 10 Undergraduate students selected to become a "Blue Apron" (the highest level of Machining Mastery at Cornell) last year, I'm the most senior machinist on our team and I have 200+ hours in the shop.  
 
 For my senior design, I'm designing an autonomous Dihedral synchro-helix actuation door system for our upcoming vehicle. This involves mechanical design, manufacturing, sensor integration, and PCB design.
 
@@ -56,7 +51,7 @@ For my senior design, I'm designing an autonomous Dihedral synchro-helix actuati
 
 As Chassis Lead, I oversaw the manufacturing of the Monocoque and Aerodynamic Chassis Components for the UC24 vehicle, the Aerodynamic and Structural Design of the UC25 Chassis, and the integration process of all mechanical, electrical, and autonomy hardware systems.  
 
-Our UC24 Model was designed in Autodesk Inventor using Surfacing tools, but I led the switch to Autodesk Alias (a top Automotive Surface Modeling Program) for the design of the UC25 Vehicle. Through an iterative design process, altering model parameters and analyzing aerodynamic performance using Ansys Fluent Computational Fluid Mechanics, I was able to reduce drag by 6% while also altering many parts for easier manufacturability with specific surfaces for Autonomous Sensor Mounting. We then analyzed and optimized our structural components/layups using Ansys ACP and Mechanical.
+Our UC24 Model was designed in Autodesk Inventor using Surfacing tools. For the UC25 we switched to Autodesk Alias (a top Automotive Surface Modeling Program) for the design of the UC25 Vehicle. Through an iterative design process, altering model parameters and analyzing aerodynamic performance using Ansys Fluent Computational Fluid Mechanics, I was able to reduce drag by 6% while also altering many parts for easier manufacturability with specific surfaces for Autonomous Sensor Mounting. We then analyzed and optimized our structural components/layups using Ansys ACP and Mechanical.
 
 ![UC24 Chassis Assembly](images/portfolio/cev/chassis.jpg)  
 *UC24 Chassis Assembly*
