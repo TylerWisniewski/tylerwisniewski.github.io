@@ -81,7 +81,7 @@ void driveStraight(int dir, int PWM){
 *Figure 2: Bluetooth command to update PID gains*
 
 ## Lab Tasks
-P/I/D Discussion
+### P/I/D Discussion
 I started with a Proportional (P) controller to control the robot's speed and position relative to the wall. The P controller calculates the error as the difference between the target distance (305 mm) and the current distance measured by the ToF sensor. The PWM output is proportional to this error.
 
 I had a ton of trouble with this part of the lab. Many errors and code rewrites, memory issues, and I even reworked my mounting structure for my ToF sensors. After much simplification, I was able to achieve a pretty effective P control setup using the following code. 
@@ -200,43 +200,29 @@ pwm= (int) (kp*errP)+(ki*errI);
 
 Eventually I found and fixed my bug, but then got hit with some strong integrator windup.
 
-[![p control](https://img.youtube.com/vi/OVZucTHJdwk/0.jpg)](https://youtu.be/OVZucTHJdwk)
+[![windup](https://img.youtube.com/vi/OVZucTHJdwk/0.jpg)](https://youtu.be/OVZucTHJdwk)
 
 *Integrator Windup* 
 
 ![ToF+pwm plot](/images/portfolio/fast-robot/5windup.png)  
 *Figure 5: Plot of ToF and PWM vs time showcasing Integrator Windup*
 
-I set Ki = 0.02 to minimize steady-state error without significantly slowing down the system.
+I set Ki = 0.01 to minimize steady-state error without significantly slowing down the system. However, even with this small value, windup grew rapidly. Thus I implemented a limit on the I term at +/- 150. (**5000 level task**).
 
-Range and Sampling Time
-The ToF sensor was configured to operate in long-distance mode (up to 3.6 meters) with a sampling rate of approximately 50 Hz. This provided sufficient accuracy for the task. The control loop ran every 40 ms, ensuring timely updates to the motor PWM values.
+[![pi control](https://img.youtube.com/vi/UbTOTI80DhU/0.jpg)](https://youtu.be/UbTOTI80DhU)
 
-Graphs and Data
-Below are the plots of distance (mm) and PWM vs. time for different Kp values:
+![PI plot](/images/portfolio/fast-robot/5pi.png)  
+*Figure 6: Plot of ToF and PWM vs time showcasing PI control*
 
-P Control Plot
-Figure 5: Distance and PWM vs. time for Kp = 0.03
+I'm not convinced that PI is actually helping for this use case as it seems to have amplified the oscillatory behavior. Depending on future lab goals, I may try to stick with well-tuned P-control. This needs further testing. 
 
-PI Control Plot
-Figure 6: Distance and PWM vs. time for Kp = 0.04 and Ki = 0.02
+### Range and Sampling Time
+The ToF sensor was configured to operate in long-distance mode (up to 3.6 meters) and the control loop ran every ~20-40 ms, ensuring timely updates to the motor PWM values.
 
-Videos
-Trial 1: Kp = 0.03 on smooth surface
-P Control
+![PI plot](/images/portfolio/fast-robot/5time.png)  
+*Figure 7: Histogram of Loop time intervals*
 
-Trial 2: Kp = 0.04 on carpet
-PI Control
-
-## 5000-Level Tasks
-### Integrator Windup Protection
-To prevent integrator windup, I capped the integral term at ±200. This ensured that the integral term did not dominate the control output, especially during large errors:
-```c
-if(Iterm > 200) Iterm = 200;
-else if(Iterm < -200) Iterm = -200;
-```
-
-*Figure 7: Integrator windup protection*
+The bulk of the loops took around 20-40 ms which is the minimun timing budget available for our ToF sensors, so I don't think I can reasonably increase my speed beyond this limit since I'm currently waiting to begin each new loop until I have ToF data ready. However, this may be alleviated with linear extrapolation.
 
 ### Linear Extrapolation
 I implemented linear extrapolation to estimate the robot's position when new ToF data was not available. This allowed the control loop to run faster than the ToF sensor's sampling rate:
@@ -254,5 +240,5 @@ if(i > 1) {
 *Figure 8: Linear extrapolation implementation*
 
 ## Conclusion
-This lab provided hands-on experience with PID control and highlighted the importance of tuning gains, managing sampling rates, and implementing safeguards like integrator windup protection. The robot successfully stopped at the target distance of 304 mm from the wall, demonstrating the effectiveness of the PID controller.
+This lab provided hands-on experience with PID control and highlighted the importance of tuning gains, managing sampling rates, and implementing safeguards like integrator windup protection. The robot successfully stopped at the target distance of 304 mm from the wall, demonstrating the effectiveness of the PI controller.
 
