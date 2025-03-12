@@ -209,6 +209,15 @@ Eventually I found and fixed my bug, but then got hit with some strong integrato
 
 I set Ki = 0.01 to minimize steady-state error without significantly slowing down the system. However, even with this small value, windup grew rapidly. Thus I implemented a limit on the I term at +/- 150. (**5000 level task**).
 
+```c
+if (errI > 150){
+    errI=150;
+}
+else if (errI < 150){
+    errI=-150;
+}
+```
+
 [![pi control](https://img.youtube.com/vi/UbTOTI80DhU/0.jpg)](https://youtu.be/UbTOTI80DhU)
 
 ![PI plot](/images/portfolio/fast-robot/5pi.png)  
