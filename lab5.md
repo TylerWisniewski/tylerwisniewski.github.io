@@ -23,7 +23,7 @@ The purpose of this lab was to implement closed loop control through PID control
 
 ![ToF+pwm plot](/images/portfolio/fast-robot/5pid.jpg)  
 
-$$ u(t)= k_p * e(t) + k_i * \int_0^t e(t) dt + k_d  *\frac{d }{dt}e(t)$$
+$$u(t)= k_p * e(t) + k_i * \int_0^t e(t) dt + k_d  *\frac{d }{dt}e(t)$$
 
 ### Bluetooth Communication Setup
 For this lab, I implemented a robust Bluetooth communication system to send and receive data between the Artemis and my computer. This was essential for debugging and tuning the PID controller. I tried to use a flag-based system to start and stop the PID control loop remotely, but kept encountering errors or inconsistency. Instead I ended up adding a Stop PID function which would cut power to the motors. In practice, I didn't end up using this at all though and just unplugged the power. 
