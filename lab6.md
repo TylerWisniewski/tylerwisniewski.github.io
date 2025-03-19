@@ -160,8 +160,9 @@ By default, the **DMP is disabled** in the SparkFun ICM-20948 Arduino library du
    - Open `Example7_DMP_Quat6_EulerAngles` in Arduino IDE.  
    - Upload the sketch and use the serial monitor to observe **yaw, pitch, and roll** values.  
 
-IMPORT VIDEO
-*Figure x: Video of Sensor Values implementing DMP*
+[![p control](https://img.youtube.com/vi/yCnYXue5xT4/0.jpg)](https://youtu.be/yCnYXue5xT4)
+
+*Figure 5: Video of Sensor Values implementing DMP*
 
 After confirming DMP was working, I then implemnted this into my begin BEGIN_A_PID case. 
 ```c
@@ -306,17 +307,17 @@ After confirming DMP was working, I then implemnted this into my begin BEGIN_A_P
           break;
           }
 ```
-*Figure x: DMP implemntation over bluetooth*
+*Figure 6: DMP implemntation over bluetooth*
 
 I then collected while rotating my robot ~90 degrees every second or two.
 
 ![time v yaw](/images/portfolio/fast-robot/6yawt.png)  
-*Figure x: Yaw vs Time graph*
+*Figure 7: Yaw vs Time graph*
 
 Even with the extra DMP math, the data collection rate is still signifigantly faster than the ToF sensor collection rate. This is even before optimzing the code at all. After optimizing, I'll start implementing PID control. 
 
 ![time v yaw](/images/portfolio/fast-robot/6t1.png)  
-*Figure x: Timing Histogram*
+*Figure 8: Timing Histogram*
 
 ### P Control
 
@@ -433,17 +434,17 @@ Even with the extra DMP math, the data collection rate is still signifigantly fa
           break;
           }
 ```
-*Figure x P Control Code*
+*Figure 9: P Control Code*
 
-INSERT P CONTROL VIDEO
-*Figure x: P Control in action (i kick the sh*t out of this car)*
+[![p control](https://img.youtube.com/vi/eDKu31RMwIE/0.jpg)](https://youtu.be/eDKu31RMwIE)
+*Figure 10: P Control in action (i kick the crap out of this car)*
 
 
 ![time v yaw](/images/portfolio/fast-robot/6pc2.png)  
-*Figure x: Angle, PWM, Error vs Time*
+*Figure 11: Angle, PWM, Error vs Time*
 
 ![time v yaw](/images/portfolio/fast-robot/6t2.png)  
-*Figure x: Timing Histogram*
+*Figure 12: Timing Histogram*
 
 Overall, I think the P Controller performance is pretty good. My kp=1.5 and the timing values are distrubted around 15 ms with 90% of the values between 5-25 ms. I'm pretty happy with this since it's signifigantly faster than my ToF rate, so I don't think it'll be a bottleneck for future projects. 
 
@@ -464,17 +465,17 @@ The behavior at the very begining is odd with wild fluctuations. However, eventu
   err= (float) errP+errI;
   pwm= (int) (kp_a*errP)+(ki_a*errI);
 ```
-*Figure x: PI Control Implementation*
+*Figure 13: PI Control Implementation*
 
-INSERT PI CONTROL VIDEO
-*Figure x: PI Control in action*
+[![p control](https://img.youtube.com/vi/yfnwVID9XAI/0.jpg)](https://youtu.be/yfnwVID9XAI)
+*Figure 14: PI Control in action*
 
 
 ![time v yaw](/images/portfolio/fast-robot/6pi.png)  
-*Figure x: Angle, PWM, Error vs Time*
+*Figure 15: Angle, PWM, Error vs Time*
 
 ![time v yaw](/images/portfolio/fast-robot/6t3.png)  
-*Figure x: Timing Histogram*
+*Figure 16: Timing Histogram*
 
 I'm very satisfied with the performance of the PI controller. It seems to settle ~30% faster than my P controller and has somehow resolved the weird bug where the car would spin around once at startup. I'm not actually sure why that's not happening anymore, but it shouldn't have been happening in the first place so I'm happy about it regardless. My gains here were kp=1.5 and ki=0.3. I wanted to keep my ki term relatively small and this one worked quite well during testing. 
 
@@ -489,7 +490,7 @@ if (errI > 150){
     errI=-150;
   }
 ```
-*Figure x: Integrator windup code*
+*Figure 17: Integrator windup code*
 
 I implementated integrator windup safeguards from the start this time since I had pretty rough results without it last lab. I set my bounds at +/- 150 so with a ki=0.30, the maximum integrator component would be 45. 
 
