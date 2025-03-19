@@ -437,6 +437,7 @@ Even with the extra DMP math, the data collection rate is still signifigantly fa
 *Figure 9: P Control Code*
 
 [![p control](https://img.youtube.com/vi/eDKu31RMwIE/0.jpg)](https://youtu.be/eDKu31RMwIE)
+
 *Figure 10: P Control in action (i kick the crap out of this car)*
 
 
@@ -468,6 +469,7 @@ The behavior at the very begining is odd with wild fluctuations. However, eventu
 *Figure 13: PI Control Implementation*
 
 [![p control](https://img.youtube.com/vi/yfnwVID9XAI/0.jpg)](https://youtu.be/yfnwVID9XAI)
+
 *Figure 14: PI Control in action*
 
 
