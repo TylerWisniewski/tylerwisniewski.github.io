@@ -29,15 +29,15 @@ Based on some notes I took for another project, I already had a decent understan
 *Figure 1: Kalman Filter Process Diagram*
 
 ![kalman filter](/images/portfolio/fast-robot/7g.jpg)  
-*Figure 1: Kalman Filter Gaussian Overlay*
+*Figure 2: Kalman Filter Gaussian Overlay*
 
 ![kalman filter](/images/portfolio/fast-robot/7kfMath.jpg)  
-*Figure 1: Kalman Filter Math*
+*Figure 3: Kalman Filter Math*
 
 Initially, I tried to implement a kalman filter utilizing my previous notes notation. However, I just ended up confusing myself by using a inchoerent mix of previous notation and notation from Fast Robots Lecture. Eventually, I decided to cut my losses and just maintain Fast Robots notation for consistency. 
 
 ![kalman filter](/images/portfolio/fast-robot/7kfTable.jpg)  
-*Figure 1: Kalman Filter Math with Fast Robots Notation*
+*Figure 4: Kalman Filter Math with Fast Robots Notation*
 
 
 
@@ -49,7 +49,7 @@ To implement the Kalman Filter, I first needed to estimate the drag (d) and mome
 3. Calculated velocity from the distance measurements
 
 ![kalman filter](/images/portfolio/fast-robot/7plotGood.png)  
-*Figure 1: Kalman Filter Math with Fast Robots Notation*
+*Figure 5: Kalman Filter Math with Fast Robots Notation*
 
 From the velocity vs time graph, I determined:
 - Steady state velocity: 1.97 m/s
@@ -108,7 +108,7 @@ print ("sig z: ", sig_z)
 ```
 
 ![kalman filter](/images/portfolio/fast-robot/7matrix.png)  
-*Figure 1: Computed KF matrix values*
+*Figure 6: Computed KF matrix values*
 
 ```pyton
 def kf(mu,sigma,u,y):
@@ -132,10 +132,10 @@ for e, f in zip(pwms, dist):
 ```
 
 ![kalman filter](/images/portfolio/fast-robot/7plotKF.png)  
-*Figure 1: Kalman Filter Python implementation with initial data*
+*Figure 7: Kalman Filter Python implementation with initial data*
 
 ![kalman filter](/images/portfolio/fast-robot/7plotKF3.png)  
-*Figure 1: Kalman Filter Python implementation with PID data*
+*Figure 8: Kalman Filter Python implementation with PID data*
 
 The default sigma values using the heuristics and equations from lecture worked incredibly well, so I kept these values. I did try other combinations, but none were as good as the initial case. Thus, these are the values I will implement into my robot.
 
@@ -143,11 +143,14 @@ The default sigma values using the heuristics and equations from lecture worked 
 
 [![kf video](https://img.youtube.com/vi/eDKu31RMwIE/0.jpg)](https://youtube.com/shorts/2dxUug19Dec?feature=share)
 
+*Figure 9: Kalman Filter Robot implementation video*
+
+
 ![kalman filter](/images/portfolio/fast-robot/7plotKFreal.png)  
-*Figure 1: Kalman Filter Robot implementation with PID data*
+*Figure 10: Kalman Filter Robot implementation with PID data*
 
 ![kalman filter](/images/portfolio/fast-robot/7KFhist.png)  
-*Figure 1: Kalman Filter Python implementation with PID data*
+*Figure 11: Kalman Filter Python implementation with PID data*
 
 During my first interations of KF implementation, I was estimating tens to hundreds of values between TOF sensor readings. This resulted in worse performance for my PID controller. To limit this, I set a cap of 5 estimated between TOF sensor readings. While fairly limited, this still resulted in a PID Loop time decrease of ~63% to an average of 14.82ms. This is quite a substantial improvement. I want to conduct further testing on the sweet spot for KF loop time during the stunt lab next week. 
 
@@ -205,7 +208,7 @@ void KF(float u, float y) {
 
 ///////////////////////////////////////////////////////////////////////KF Vars-
 ```
-*Figure 9: Kalman Filter Variables and helper function*
+*Figure 12: Kalman Filter Variables and helper function*
 
 ```c
     case PID_BEGIN:
@@ -308,4 +311,4 @@ void KF(float u, float y) {
         break;
       }
 ```
-*Figure 1: KF Robot Code*
+*Figure 13: KF Robot Code*

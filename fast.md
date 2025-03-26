@@ -29,14 +29,14 @@ gallery2:
     alt: "placeholder image 2"
     title: "PID Control"
   - url: /lab6
-    image_path: /images/portfolio/fin.png
+    image_path: /images/portfolio/fast-robot/6yawt.png
     alt: "placeholder image 3"
     title: "Image 3 title caption"
 gallery3:
-  - url: /lab1/
-    image_path: /images/portfolio/fast-robot/lab1.png
-    alt: "cev image"
-    title: "Lab 1 A/B"
+  - url: /lab7/
+    image_path: /images/portfolio/fast-robot/7g.jpg
+    alt: "kalman filter"
+    title: "Lab 7"
   - url: /lab2/
     image_path: /images/portfolio/fast.gif
     alt: "placeholder image 2"
