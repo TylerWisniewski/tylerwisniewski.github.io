@@ -110,7 +110,7 @@ print ("sig z: ", sig_z)
 ![kalman filter](/images/portfolio/fast-robot/7matrix.png)  
 *Figure 6: Computed KF matrix values*
 
-```pyton
+```python
 def kf(mu,sigma,u,y):
     
     mu_p = Ad.dot(mu) + Bd.dot(u) 
