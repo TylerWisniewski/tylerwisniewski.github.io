@@ -72,17 +72,18 @@ I had 5 primary states for my setup. In state 1, I drive forward at max PWM and 
 
 [![Stunt 2](https://img.youtube.com/vi/IDwuLByJJRE/0.jpg)](https://youtu.be/IDwuLByJJRE)
 
-*Figure 2: Video for Stunt 2*
+*Figure 4: Video for Stunt 2*
 
 ![kalman filter](/images/portfolio/fast-robot/8p2.png)  
-*Figure 3: Distance and PWM Plots for Stunt 2*
+*Figure 5: Distance and PWM Plots for Stunt 2*
 
 
 [![Stunt 3](https://img.youtube.com/vi/FogO7yJx5O8/0.jpg)](https://youtu.be/FogO7yJx5O8)
 
-*Figure 2: Video for Stunt 3*
+*Figure 6: Video for Stunt 3*
 
 ![kalman filter](/images/portfolio/fast-robot/8p3.png)  
-*Figure 3: Distance and PWM Plots for Stunt 3*
+*Figure 7: Distance and PWM Plots for Stunt 3*
 
+## Discussion
 Overall, this lab was pretty fun. Everything worked well and I spent signifigantly less time debugging than previous labs which was nice!
