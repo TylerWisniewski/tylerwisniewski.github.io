@@ -37,10 +37,10 @@ gallery3:
     image_path: /images/portfolio/fast-robot/7g.jpg
     alt: "kalman filter"
     title: "Lab 7"
-  - url: /lab2/
-    image_path: /images/portfolio/fast.gif
-    alt: "placeholder image 2"
-    title: "Image 2 title caption"
+  - url: /lab8/
+    image_path: /images/portfolio/fast-robot/8c.jpg
+    alt: "lab8"
+    title: "lab 8"
   - url: /images/portfolio/fin.png
     image_path: /images/portfolio/fin.png
     alt: "placeholder image 3"
