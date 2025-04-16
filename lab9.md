@@ -233,7 +233,7 @@ void turn(int dir, int PWM) {
 *Figure 3: Turn Helper Function*
 
 
-[![Stunt 1](https://img.youtube.com/vi/gCnoebWyYc4/0.jpg)](https://youtu.be/gCnoebWyYc4)
+[![Mapping](https://img.youtube.com/vi/A6L5j20Ldqw/0.jpg)](https://youtu.be/A6L5j20Ldqw)
 
 *Figure 4: Video of PID control with pause for data collection*
 
@@ -246,7 +246,7 @@ Upon implementing my code, I ended up changing my initial target to -180, and th
 *Figure 5,6,7: Test PID Behavior and data rate*
 
 
-![mapping](/images/portfolio/fast-robot/9test.png)  
+![mapping](/images/portfolio/fast-robot/9test.jpg)  
 *Figure 8: test location*
 
 I was unable to attend office hours and record a run in the lab space. Thus I used the Hallway in Phillips Hall 2nd floor. I plan on retrying my code in lab tomorrow. 
@@ -260,9 +260,16 @@ I was unable to attend office hours and record a run in the lab space. Thus I us
 
 ![mapping](/images/portfolio/fast-robot/9s1.png) 
 *Figure 11: Mapped Scatterplot*
+After transforming all both data sets, I combined them into a single map. Cross referencing with the above photo, the room becomes very visible. 
+
+
 
 ![mapping](/images/portfolio/fast-robot/9s2.png)  
 *Figure 11: Mapped Scatterplot with walls*
+
+I then used a tape measure to wall dimensions based off of robot starting positions and scatterplot data.
+
+Another thing I noticed was that I had to rotate both of my data sets. I expected this since the initial orientation is unlikely to carry through. However, I was surprise that the rotation was different for two sets. It seemed off by roughly 20 degrees. I suspect this may be due to some drift, differing initial placement, or some combination of both. 
 
 
 ```c
