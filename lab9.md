@@ -232,23 +232,37 @@ void turn(int dir, int PWM) {
 ```
 *Figure 3: Turn Helper Function*
 
-![mapping](/images/portfolio/fast-robot/9test.png)  
+
+[![Stunt 1](https://img.youtube.com/vi/gCnoebWyYc4/0.jpg)](https://youtu.be/gCnoebWyYc4)
+
+*Figure 4: Video of PID control with pause for data collection*
+
+Upon implementing my code, I ended up changing my initial target to -180, and then incremented +10 degrees every time to +180 degrees. 
 
 
 ![mapping](/images/portfolio/fast-robot/9p1.png)  
-
 ![mapping](/images/portfolio/fast-robot/9p2.png)  
-
 ![mapping](/images/portfolio/fast-robot/9p3.png)  
+*Figure 5,6,7: Test PID Behavior and data rate*
 
+
+![mapping](/images/portfolio/fast-robot/9test.png)  
+*Figure 8: test location*
+
+I was unable to attend office hours and record a run in the lab space. Thus I used the Hallway in Phillips Hall 2nd floor. I plan on retrying my code in lab tomorrow. 
 
 ![mapping](/images/portfolio/fast-robot/9t1.png)  
+*Figure 9: Data Collection 1*
+
 
 ![mapping](/images/portfolio/fast-robot/9t2.png)  
+*Figure 10: Data Collection 2*
 
 ![mapping](/images/portfolio/fast-robot/9s1.png) 
+*Figure 11: Mapped Scatterplot*
 
 ![mapping](/images/portfolio/fast-robot/9s2.png)  
+*Figure 11: Mapped Scatterplot with walls*
 
 
 ```c
@@ -311,5 +325,6 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 ```
+*Figure 13: Mapped Scatterplot with Walls Code*
 
 

@@ -38,13 +38,13 @@ gallery3:
     alt: "kalman filter"
     title: "Lab 7"
   - url: /lab8/
-    image_path: /images/portfolio/fast-robot/8c.jpg
+    image_path: /images/portfolio/fast-robot/8c.png
     alt: "lab8"
     title: "lab 8"
-  - url: /images/portfolio/fin.png
-    image_path: /images/portfolio/fin.png
-    alt: "placeholder image 3"
-    title: "Image 3 title caption"
+  - url: /lab9
+    image_path: /images/portfolio/fast-robot/9s2.png
+    alt: "lab 9"
+    title: "lab 9"
 
 ---
 
