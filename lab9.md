@@ -26,7 +26,7 @@ The goal of this lab was to improve on past controllers in order to be able to p
 
 When making my Angular PID controller dur lab 5, I had a great deal of problems when I would cross the +180 to -180 threshold. First, I altered my PID logic to accomodate for this case better.
 
-[![Stunt 1](https://img.youtube.com/vi/gCnoebWyYc4/0.jpg)](https://youtu.be/gCnoebWyYc4)
+[![Stunt 1](https://img.youtube.com/vi/AEwdidDwAXM/0.jpg)](https://youtu.be/AEwdidDwAXM)
 
 *Figure 1: Angular PID with wrap control video*
 
