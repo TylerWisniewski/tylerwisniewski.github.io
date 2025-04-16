@@ -20,7 +20,8 @@ gallery:
 
 
 ## Prelab
-The goal of this lab was to improve on past controllers in order to be able to perform a stunt. I chose to do the flipping stunt, utilizing the kalman filter and PID control I created last week. 
+The goal of this lab was to use sensor data and transformation matrices in order to create a map our external enviornment using a distance sensor from a fixed position, allowing only rotation.
+
 
 ## PID Wrap
 
