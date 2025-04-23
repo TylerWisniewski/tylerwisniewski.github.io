@@ -19,7 +19,6 @@ gallery:
 ---
 
 
-# Lab 10: Bayes Filter Simulation for Grid Localization
 
 ## Overview
 In this lab, we implemented grid-based localization using a Bayes Filter and simulated odometry. The goal was to estimate the position of a robot moving through a known map based on noisy sensor readings and control inputs. We executed this on a discretized grid using a virtual robot simulator.
@@ -28,7 +27,7 @@ In this lab, we implemented grid-based localization using a Bayes Filter and sim
 
 ## The Bayes Filter
 
-The Bayes Filter provides a probabilistic framework for estimating a robot’s position over time using control inputs (odometry) and observations (sensor measurements). Like the Kalman Filter—which is a special case for linear Gaussian systems—the Bayes Filter maintains a belief distribution over all possible positions and continuously refines it through **prediction** and **update** steps.
+The Bayes Filter provides a probabilistic framework for estimating a robot’s position over time using control inputs (odometry) and observations (sensor measurements). Like the Kalman Filter, the Bayes Filter maintains a belief distribution over all possible positions and continuously refines it through **prediction** and **update** steps.
 
 ---
 
@@ -205,7 +204,7 @@ Our simulation showed that even with inaccurate odometry (red), the Bayes Filter
 Notably:
 - Errors were highest at corners of the grid but recovered quickly.
 - Raw Odom (red) is absolutely useless alone.
-- The center of the map occasionally produced ambiguous results due to symmetry.
+- The center of the map occasionally produced ambiguous results
 - The belief consistently reached a confidence of `prob = 1.0` at the correct grid cell.
 
 [![Stunt 1](https://img.youtube.com/vi/Uv3n8l6dsaA/0.jpg)](https://youtu.be/Uv3n8l6dsaA)
