@@ -17,22 +17,21 @@ I'm very active on campus participating in and holding leadership positions in t
 
 ## Campus Involvements
 
-| Organization                | Description       | Role |
-| -------------------- | -------------------|
-| Cornell Electric Vehicles| Student Project Team building hyper-efficient, autonomous cars | Mechanical Engineer > Chassis Lead> Full Team Lead |
-| MAE 2250 Introduction to Mechanical Design [Mechanical Synthesis] | Amazing Design/Project based class for Engineering Students at Cornell| Student > TA x2 |
-| Emerson Machine Shop | The place where myself and all the other project team members machine all their parts | Machine Shop Supervisor
-| Tatkon Center for New Students | The program that runs the week long orientation for new students at Cornell before classes start | Orientation Leader |
-| ZT Group | Nano Heat Energy Research Lab | Undergraduate Researcher |
-| CU Empower | Cornell EMPower mentoring supports the personal and academic development and achievement of first-year undergraduates, as well as new transfer students, by matching them with an upper-class student or a graduate student peer mentor.| Mentee ==> Mentor for other 1st Gen Engineering students |
-| Der Hexenkreis (Mortar Board) | Senior Honor Scoiety | Member |
-| Phi Sigma Kappa | Social Fraternity | Member |
-| Theta Tau | Professional Engineering Fraternity | Member |
-| Cornell Pickleball Club | Beat my friends in pickleball | Member |
-| Cornell Spikeball Club | Get beaten by my friends in spikeball | Member|
-| Cornell Rock Climbing Club | Beat my previous self in climbing | Member |
 
-
+Organization | Description | Role
+| -------------------- | -------------------| -------------------|
+Cornell Electric Vehicles | Student project team building hyper-efficient, autonomous cars | Mechanical Engineer → Chassis Lead → Team Lead
+MAE 2250: Intro to Mechanical Design | Hands-on mechanical design course for engineering students | Student → TA (for last 2 years)
+Emerson Machine Shop | Where project teams (and I) machine all our parts | Machine Shop Supervisor
+Tatkon Center for New Students | Runs orientation for incoming students | Orientation Leader
+ZT Group (Nano Heat Energy Research) | Research lab focused on nanoscale energy systems | Undergraduate Researcher
+CU EMPower | Peer mentoring for first-gen and transfer students | Mentee → Mentor
+Der Hexenkreis (Mortar Board) | Senior Honor Society | Member
+Phi Sigma Kappa | Social fraternity | Member
+Theta Tau | Professional engineering fraternity | Member
+Cornell Pickleball Club | Beat my friends in pickleball | Member
+Cornell Spikeball Club | Get beat by my friends in spikeball | Member
+Cornell Rock Climbing Club | Beat my past self in climbing | Member
 ---
 
 ## Other stuff I like to do
