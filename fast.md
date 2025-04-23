@@ -45,6 +45,19 @@ gallery3:
     image_path: /images/portfolio/fast-robot/9s2.png
     alt: "lab 9"
     title: "lab 9"
+gallery4:
+  - url: /lab10/
+    image_path: /images/portfolio/fast-robot/10b.png
+    alt: "bayes filter"
+    title: "Lab 10"
+  - url: /lab8/
+    image_path: /images/portfolio/fast-robot/8c.png
+    alt: "lab8"
+    title: "lab 8"
+  - url: /lab9
+    image_path: /images/portfolio/fast-robot/9s2.png
+    alt: "lab 9"
+    title: "lab 9"
 
 ---
 
@@ -57,6 +70,8 @@ I am a UG Senior/Early MEng student at Cornell University studying Mechanical En
 {% include gallery caption="Labs 1-3." %}
 {% include gallery id="gallery2" caption="Labs 4-6." %}
 {% include gallery id="gallery3" caption="Labs 7-9." %}
+{% include gallery id="gallery4" caption="Labs 10-12." %}
+
 
 
 
