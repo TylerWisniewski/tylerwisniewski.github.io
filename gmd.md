@@ -7,7 +7,7 @@ author_profile: true
 ---
 *Non-Disclosure Agreement: I will only disclose non-proprietary information regarding my work at General Motors. All images are public knowledge.*
 
-![CAD Explosion](images/portfolio/gmd-logo.jpg)  
+
 
 From May 2024 – August 2024, I worked as a Hardware Design and Test Engineering Intern on the Advanced Systems Integration Team at General Motors Defense. I played a key role in designing, optimizing, and testing chassis, ventilation, and electrical components in a dynamic engineering environment. 
 
@@ -19,3 +19,5 @@ Our office was next door to an active build/test area, so I always worked with o
 
 Beyond technical contributions, I was an active member of the Performance Driving Team, where I helped maintain and race a fleet of Corvettes and Camaros during work sessions.
 
+
+![CAD Explosion](images/portfolio/gmd-logo.jpg)  
