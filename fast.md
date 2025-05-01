@@ -51,9 +51,9 @@ gallery4:
     alt: "bayes filter"
     title: "Lab 10"
   - url: /lab8/
-    image_path: /images/portfolio/fast-robot/8c.png
+    image_path: /images/portfolio/fast-robot/11sim.png
     alt: "lab8"
-    title: "lab 8"
+    title: "lab 11"
   - url: /lab9
     image_path: /images/portfolio/fast-robot/9s2.png
     alt: "lab 9"
