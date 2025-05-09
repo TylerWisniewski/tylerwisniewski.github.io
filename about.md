@@ -37,5 +37,7 @@ I'm very active on campus participating in and holding leadership positions in t
 ---
 
 ## Other stuff I like to do
-snowboard, surf, read, corporate espionage <small>(this is joke, please do not call the fbi)</small>, bouldering,  etc. Right now I'm reading God Emperor of Dune (book 4) and absolutely loving it!
+snowboard, surf, read, rock climbing, and other stuff. Right now I'm reading God Emperor of Dune (book 4) and absolutely loving it!
 
+
+test: <small>(small text)</small>
