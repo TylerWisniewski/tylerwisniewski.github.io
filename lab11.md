@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "Fast Robots - Lab 10: Localization [real]"
+title: "Fast Robots - Lab 11: Localization [real]"
 permalink: /lab11/
 author_profile: true
 gallery:
@@ -199,5 +199,6 @@ Resultant error: (0.000, 0.010, 10.0)
 
 --- 
 ## Conclusion
+While not perfect, the Bayes Filter performed well under real-world noise. The largest errors occurred in orientation rather than position, which is expected given the limitations of single-sensor range-only localization with a fairly large (20 degree) swing between measurements. 
 While not perfect, the Bayes Filter performed well under real-world noise. The largest errors occurred in orientation rather than position, which is expected given the limitations of single-sensor range-only localization with a fairly large (20 degree) swing between measurements. 
 

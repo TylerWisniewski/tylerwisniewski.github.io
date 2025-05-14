@@ -17,7 +17,7 @@ gallery:
 
 ## What is Wiski Fins?
 
-Initially a gift for my younger brother, I optimized surfboard fins for his size, weight, and existing surfboards. I then improved hydrodynamic efficiency during turning through the use of CFD and Structural FEA analysis and manufactured the fins using the Forged Carbon Fiber manufacturing process. Eventually, my brother and I created **Wiski Fins**, started selling fins to friends, and are now in negotiations with local surf shops. So far, we've sold **12 sets of fins at $69 each**, generating over **$800 in revenue and $500 in profit**!
+Initially a gift for my younger brother, I optimized surfboard fins for his size, weight, and existing surfboards. I then improved hydrodynamic efficiency during turning through the use of CFD and Structural FEA analysis and manufactured the fins using the Forged Carbon Fiber manufacturing process. Eventually, my brother and I created **Wiski Fins**, started selling fins to friends, and are now in negotiations with local surf shops. So far, we've sold 12 sets of fins at $69 each, generating over $800 in revenue and $500 in profit!
 
 ---
 
@@ -25,13 +25,13 @@ Initially a gift for my younger brother, I optimized surfboard fins for his size
 
 ![Me and Nicky](images/portfolio/fin/nicky.jpg)  
 
-My little brother, Nicky, and I have been going to the beach our whole lives. Over the years, we've built award-winning sandcastles, bodyboarded with dolphins, established a rainbow-loom bracelet empire, and of course, surfed! Ever since I left for college in 2021, Nick has been surfing even more and was looking into some board upgrades. Unfortunately, **FCS and Futures have a complete monopoly on the fin market**, making a good set of carbon fiber fins cost around **$150**.  
+My little brother, Nicky, and I have been going to the beach our whole lives. Over the years, we've built award-winning sandcastles, bodyboarded with dolphins, established a rainbow-loom bracelet empire, and of course, surfed! Ever since I left for college in 2021, Nick has been surfing even more and was looking into some board upgrades. Unfortunately, FCS and Futures have a complete monopoly on the fin market, making a good set of carbon fiber fins cost around **$150**.  
 
 ---
 
 ## Technical Motivation  
 
-While I love surfing and bodyboarding, the engineering part of me recoils at the "bro science" that dominates discussions about board and fin design. Almost all decisions are based on **trial and error and feel** rather than structured engineering principles. I didn’t have the time, hundreds of dollars, or access to an ocean while studying in **Ithaca, NY**, or working in **Milford, MI**, to test a variety of fin designs myself.  
+While I love surfing and bodyboarding, the engineering part of me recoils at the "bro science" that dominates discussions about board and fin design. Almost all decisions are based on **how it feels** rather than structured engineering principles. I didn’t have the time, hundreds of dollars, or access to an ocean while studying in **Ithaca, NY**, or working in **Milford, MI**, to test a variety of fin designs myself.  
 
 Given my experience working with **carbon fiber and FEA analysis** through my project team, I set some goals for this project:  
 
