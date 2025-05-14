@@ -29,7 +29,7 @@ Next, my TOF sensor was giving me incredibly noisy and unreliable data. Sometime
 
 ![tof](/images/portfolio/fast-robot/12tof.jpg)  
 
-![anguish](/images/portfolio/fast-robot/12sad.jpg)  
+![anguish](/images/portfolio/fast-robot/12sad.JPG)  
 
 *My ToF Sensor and my reaction upon learning of its demise*
 
