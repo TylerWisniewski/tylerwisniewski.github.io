@@ -27,9 +27,9 @@ Electromagnetism?! idk
 
 Next, my TOF sensor was giving me incredibly noisy and unreliable data. Sometimes it would work perfect and othertimes it would freak out. After close inspection, it seems like the front part had cracked. I don't know when this happened, but if I had to guess, it was likely during the stunt performance on ECE Robotics day. My other ToF sensor is also broken so this puts me in a difficult position for this lab. 
 
-![tof :(](/images/portfolio/fast-robot/12tof.jpg)  
+![tof](/images/portfolio/fast-robot/12tof.jpg)  
 
-![tof :(](/images/portfolio/fast-robot/12sad.jpg)  
+![anguish](/images/portfolio/fast-robot/12sad.jpg)  
 
 *My ToF Sensor and my reaction upon learning of its demise*
 

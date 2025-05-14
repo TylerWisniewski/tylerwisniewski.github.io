@@ -54,10 +54,10 @@ gallery4:
     image_path: /images/portfolio/fast-robot/11sim.png
     alt: "lab8"
     title: "lab 11"
-  - url: /lab9
+  - url: /lab12
     image_path: /images/portfolio/fast-robot/9s2.png
-    alt: "lab 9"
-    title: "lab 9"
+    alt: "lab 12"
+    title: "lab 12"
 
 ---
 
