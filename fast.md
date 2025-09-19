@@ -26,12 +26,12 @@ gallery2:
     title: "Lab 4"
   - url: /lab5/
     image_path: /images/portfolio/fast-robot/5pid.jpg
-    alt: "placeholder image 2"
-    title: "PID Control"
+    alt: "lab 5"
+    title: "lab 5"
   - url: /lab6
     image_path: /images/portfolio/fast-robot/6yawt.png
-    alt: "placeholder image 3"
-    title: "Image 3 title caption"
+    alt: "lab 6"
+    title: "lab 6"
 gallery3:
   - url: /lab7/
     image_path: /images/portfolio/fast-robot/7g.jpg
@@ -52,7 +52,7 @@ gallery4:
     title: "Lab 10"
   - url: /lab11/
     image_path: /images/portfolio/fast-robot/11sim.png
-    alt: "lab8"
+    alt: "lab 11"
     title: "lab 11"
   - url: /lab12
     image_path: /images/portfolio/fast-robot/12fin.jpg
@@ -64,15 +64,10 @@ gallery4:
 ## Let me introduce myself
 I am a UG Senior/Early MEng student at Cornell University studying Mechanical Engineering. Outside of the classroom, I spent time with CEV and I like rock climbing.
 
-*Note: I am actively taking this course, lab pages will be updated throughout the semester as I complete them.*
-
 ## Lab Reports
 {% include gallery caption="Labs 1-3." %}
 {% include gallery id="gallery2" caption="Labs 4-6." %}
 {% include gallery id="gallery3" caption="Labs 7-9." %}
 {% include gallery id="gallery4" caption="Labs 10-12." %}
-
-
-
 
 [YouTube Playlist](https://www.youtube.com/playlist?list=PLBO_ctcwR7rnDA0wUdHClEHHy3owbuQsL)
