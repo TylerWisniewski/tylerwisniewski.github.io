@@ -39,7 +39,6 @@ I worked with the sub-team leads (Mechanical, Electrical, Data A&A, Autonomy, Op
 
 In addition to my role as Team Lead this year, I am also love machining and I'm completing my Senior Design for CEV. As 1 of 10 Undergraduate students selected to become a "Blue Apron" (the highest level of Machining Mastery at Cornell) last year, I'm the most senior machinist on our team and I have 200+ hours in the shop.  
 
-For my senior design, I'm designing an autonomous Dihedral synchro-helix actuation door system for our upcoming vehicle. This involves mechanical design, manufacturing, sensor integration, and PCB design.
 
 ![Technical Inspection](images/portfolio/cev/comp_tech.JPG)  
 *A photo of me and some team members with the car before heading into (and Passing!) technical inspection at the Shell Eco Marathon.*
@@ -77,7 +76,7 @@ Based on learnings from our previous manufactyuring cycle, we've been able to re
 *Bleeding Brakes @ the Indy 500 Raceway for Comp*
 
 ![upright](images/portfolio/cev/upright.JPG)  
-*I redesigned and machined our suspension uprights*
+*Steering Upright*
 
 ![Comp Waffle House Tradition](images/portfolio/cev/comp_wafflehouse.jpg)  
 *Maintaining the Comp Waffle House Tradition*
