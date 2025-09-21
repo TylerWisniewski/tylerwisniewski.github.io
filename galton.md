@@ -18,13 +18,13 @@ Additionally, the implementation incorporated audio feedback and user-controlled
 ### Hardware Design
 Our Development process moved in stages, accomplishing specific checkpoints over 3 weeks. The hardware design of our digital Galton board was centered around the RP2040 microcontroller, utilizing its GPIO capabilities to interface with VGA output, audio generation, and user input controls. The VGA output required precise timing to generate a stable display, making use of dedicated PIO blocks to handle synchronization signals. The VGA pin assignments included horizontal and vertical sync signals, as well as RGB data lines. We also included a secondary green data line with an alternate resistor to achieve a greater range of color variety. Audio output was implemented via SPI using DMA, ensuring that sound effects played efficiently without interrupting the main execution loop.
 
-![tof](/images/portfolio/fast-robot/12tof.jpg)  
+![galton](/images/portfolio/galton/g1.png)  
 *Figure 1: Wiring Layout Diagram*
 
 To enable user interaction, a potentiometer and a button were integrated into the system. The potentiometer allowed dynamic adjustment of simulation parameters, such as the number of active balls, gravity, and bounciness, while the button toggled between these settings. Implementing a debounce mechanism for the button ensured reliable input recognition, preventing unintended state changes. Additionally, an LED indicator was included to signal frame drops, providing a simple yet effective diagnostic tool for monitoring system performance.
 
 
-![tof](/images/portfolio/fast-robot/12tof.jpg)  
+![galton](/images/portfolio/galton/g2.png)  
 *Figure 2: Final Breadboard Setup*
 
 One of the key hardware challenges encountered was noise interference from long wire connections, particularly affecting the potentiometer readings. The high-frequency signals from the VGA data lines introduced significant noise, which was mitigated using a combination of physical and digital low-pass filters. This experience highlighted the importance of careful circuit design, especially in mixed-signal environments where analog components are susceptible to digital noise. Future designs would benefit from shorter analog signal paths and better isolation from high-speed digital signals.
@@ -34,7 +34,7 @@ The software for Lab 1 was to generate a Digital Galton Board on a VGA screen, a
 
 Every ball is spawned in at the top center of the VGA display, at the position of (320, 66). The random distribution of balls through the galton board is created through a use of a random initial x-velocity in the range of (-1, 1]. A fix15 value of this range can be efficiently calculated through the rand() function, masking the 32-bit output to the lower 16 bits for a range of [0, 2), and subtracting the result from 1.
 
-![tof](/images/portfolio/fast-robot/12tof.jpg)  
+![galton](/images/portfolio/galton/g3.png)  
 *Figure 3: Helper Function for Random Generation of Initial x-velocity*
 
 Each ball’s position is updated on every frame, taking into account gravitation acceleration and any collisions with pegs. Collisions between balls were not modelled in this simulation. Gravitational acceleration was modeled by increasing the y-velocity by a set value on every iteration. We chose an initial gravity value of 0.75, and this is one parameter adjustable through the potentiometer. 
@@ -43,24 +43,24 @@ Collision physics were calculated based on the x and y values of each ball compa
 
 When a collision occurs, a short “thunk” sound is generated through the speakers. This audio signal is handled through a DMA channel in order to save cpu cycles on audio synthesis. We first check that the DMA channel isn’t already generating a sound. If not, then we set the data channel’s read address to the beginning of the DAC_data, and set it active with the dma_start_channel_mask function.
 
-![tof](/images/portfolio/fast-robot/12tof.jpg)  
-*Figure 3: Sound Generation through DMA Channel*
+![galton](/images/portfolio/galton/g4.png)  
+*Figure 4: Sound Generation through DMA Channel*
 
-![tof](/images/portfolio/fast-robot/12tof.jpg)  
-*Figure 4: Galton Board Segmentation, 21 Sections of <8 Pegs Each*
+![galton](/images/portfolio/galton/g5.png)  
+*Figure 5: Galton Board Segmentation, 21 Sections of <8 Pegs Each*
 
 The collision physics calculation provided an opportunity to massively optimize the compute time of our program. Because this code is repeated for every ball being drawn on frame, slight improvements led to massive compounding gains. The initial version of our code iterated through every ball, then compared each ball to every peg. Through testing, we implemented a function that checks the ball’s x and y positions to localize the ball to a section of the galton board with a set number of pegs. This is implemented in return_peg_div_indx(). Through testing, we chose to segment the galton board into 21 divisions with up to 8 pegs each. This means that the aforementioned collision physics loop runs less than 8 times per ball per frame. The effects of various galton board segmentations are evaluated in the results section of this lab report.
 For the data displayer for active ball numbers, the total ball used, times, bounciness, and gravity, the following logic was used:
 
-![tof](/images/portfolio/fast-robot/12tof.jpg)  
-*Figure 5: Logic for Data Displayer (same logic for number of balls, active time, etc.)*
+![galton](/images/portfolio/galton/g6.png)  
+*Figure 6: Logic for Data Displayer (same logic for number of balls, active time, etc.)*
 	
 All prev_data was initialized as -1, so when new data is collected, the displayer will be updated. Whenever the program is activated, it will erase previous text on the VGA screen and write the latest data to the VGA screen. After the latest data is displayed, the program will store the latest data as previous data and wait for the next comparison and activation. The code shown above is only a template, in the code shown in the appendix, the “data” was replaced by the real data going to be displayed like active ball number, total ball number, and etc. 
 
 For the button to switch the state potentiometer control, has a similar debounce logic to Lab 1. It will debounce the input and change the state when it becomes pressed. When the state of the button changes, the potentiometer’s change will cause the change of another parameter. When it changes to state 0, which is the initial state and reset state, the active ball number, bounciness, gravity, histogram, and total ball number will be reset in this state. For state 1/2/3, the potentiometer will change the active ball number, bounciness, and gravity using the code below:
 
-![tof](/images/portfolio/fast-robot/12tof.jpg)  
-*Figure 6: Logic to Change Active Ball Number, Bounciness, and Gravity*
+![galton](/images/portfolio/galton/g7.png)  
+*Figure 7: Logic to Change Active Ball Number, Bounciness, and Gravity*
 	
 Following the code shown above, since the reading of the potentiometer meter (raw) has a range from 0 to 4095, there were 4096 discrete levels. The new data will be calculated by the code shown above based on the reading of the potentiometer. Moreover, when the state of the potentiometer is set to reset mode, the new data will be set to the initial data. Moreover, in state 1/2/3, the change of the potentiometer will also cause a reset of the histogram and the total number of balls by clearing the entire histogram while resetting all of its heights to 0 and reset the total number of balls in the data display section. 
 
@@ -70,8 +70,8 @@ For the histogram part, the height of each section is based on the normalized ba
 
 After the height is calculated, shown as in the code below, when the new height is lower than the original height, the change in the height will be removed from the bar top by drawing a black rectangle. However, if the new height is higher, a new rectangle will be drawn in order to display the new histogram. Considering the resolution of the VGA display, the slot width of each bar was set as 34. When the histogram needs to be reset, the height, old_height, and number of balls in each section will be reset to 0 and the histogram can be completely reset.
 
-![tof](/images/portfolio/fast-robot/12tof.jpg)  
-*Figure 7: Histogram Logic*
+![galton](/images/portfolio/galton/g8.png)  
+*Figure 8: Histogram Logic*
 
 
 ## Results: 
@@ -90,7 +90,7 @@ This is not to say that our simulation lacked any quantitative measure of perfor
 |2| 216|
 |4| 138|
 
-*Figure 8: Radius of Ball Drawn with fillCircle() vs Maximum Number of Balls in Simulation*
+*Figure 9: Radius of Ball Drawn with fillCircle() vs Maximum Number of Balls in Simulation*
 
 We also kept track of the number of missed frames in frames_missed, which incremented on every frame which failed to meet timing deadlines. With these two metrics we devised a quantitative benchmark to record our progress as we made optimizations to the code. Because we spawn every ball at once at the start of the program, many balls are likely to have a collision at once, resulting in a sudden increase in program execution time. We noticed it takes about 30 seconds for the balls to randomly scatter out in the y-axis and produce a smooth flow of balls, rather than concentrated bursts of balls. We start our benchmark at 30 seconds , and observe the number of missed frames in 10 seconds. We permitted 1 missed frame as a pass in the benchmark, representing a 99.66% rate in the number of frames meeting the timing deadline. Figures 7 and 8 are examples of how performance impact from modifications to the code were quantified. Note that these tables above refer to benchmarks completed at one stage DURING the software optimization process. The maximum number of balls is not representative of the final program.
 
@@ -101,12 +101,12 @@ We also kept track of the number of missed frames in frames_missed, which increm
 |21 (<8)| 512|
 |136 (1)| 119|
 
-*Figure 9: Peg Segmentations vs Maximum Number of Balls in Simulation*
+*Figure 10: Peg Segmentations vs Maximum Number of Balls in Simulation*
 
 Another quantitative measure of the performance of our digital galton board is the distribution of balls as shown in the histogram. This histogram should follow a Gaussian distribution as per the central limit theorem. Any deviations from the normal distribution indicated some bug with the code. Figure 9 below compares the program’s generated histogram against a plot of the Gaussian distribution shown in red. 
 
-![tof](/images/portfolio/fast-robot/12tof.jpg)  
-*Figure 10: Generated Histogram compared to Ideal Gaussian Distribution*
+![galton](/images/portfolio/galton/g11.png)  
+*Figure 11: Generated Histogram compared to Ideal Gaussian Distribution*
 
 We note that the histogram plot is a very close approximation to the Gaussian distribution. Thus we conclude that the program is indeed doing a good simulation of IID random values. Slight deviations are present in the figure above. This could be down to the relatively low number of trials: The screenshot was taken after 53 seconds of program execution with a total of 58,000 balls. The Gaussian distribution should hold better as the number of balls approaches infinity. Based on the graph, we can conclude that the mean of our Galton Board is around 0.0, with a standard deviation around 2. A theoretical Galton Board which has a middle point at (0,0) also has a mean of 0.0 and a standard deviation of 2. The similar result can prove that the Galton Boards are providing a similar Gaussian with a  theoretical standard Galton Board.
 
