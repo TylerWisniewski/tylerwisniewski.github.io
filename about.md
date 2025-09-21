@@ -10,10 +10,11 @@ toc: true
 
 ## Who am I?
 
-Hi, I'm Tyler an BS/ME stduent at Cornell studying Mechanical Engineering. So far I've worked on medieval siege weapons, surfboard fins, autonomus/hyper-efficient cars, quantum computers, all-terrian light-duty trucks, and other stuff. This summer I'll be building rocket engines
+Hi, I'm Tyler an BS/ME stduent at Cornell studying Mechanical Engineering. So far I've worked on medieval siege weapons, surfboard fins, autonomus/hyper-efficient cars, quantum computers, all-terrian light-duty trucks, rocket engines, and other stuff. 
 
+I really like building things. Creation >> Consumption. 
 
-I'm very active on campus participating in and holding leadership positions in the following organizations on campus. 
+I'm very active on campus participating in the following organizations on campus. 
 
 ## Campus Involvements
 
@@ -37,7 +38,7 @@ I'm very active on campus participating in and holding leadership positions in t
 ---
 
 ## Other stuff I like to do
-snowboard, surf, read, rock climbing, and other stuff. Right now I'm reading God Emperor of Dune (book 4) and absolutely loving it!
+snowboard, surf, read, rock climbing, and other stuff. Right now I'm reading the Dune Series (book 4) and absolutely loving it!
 
 
 test: <small>(small text)</small>
