@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "galton"
+title: "Digital Galton Board Simulation"
 permalink: /galton/
 excerpt: "Digital Galton Board"
 author_profile: true

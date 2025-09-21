@@ -27,4 +27,4 @@ You can find our **final report** below, plus a **video of our quarter-final win
 ![Battle GIF](images/portfolio/mechatronics/match-vid.gif)  
 *Video of one of our matches. Salamence is a beefy robot, so he pushes the others around a bit.*  
 
-📄 **[Mechatronics Robot Report (PDF)](images/portfolio/mechatronics/Mechatronics%20Final%20Report.pdf)**
+📄 **[Mechatronics Robot Report (PDF)](https://tylerwisniewski.github.io/images/portfolio/mechatronics/Mechatronics%20Final%20Report.pdf)**
