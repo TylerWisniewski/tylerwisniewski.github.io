@@ -2,13 +2,12 @@
 layout: posts
 title: "iot"
 permalink: /iot/
-excerpt: "Machine Learnin Traffic Tracker"
+excerpt: "Machine Learning Traffic Tracker"
 author_profile: true
 ---
 
 
 
-From May 2025 – August 2025, I worked at spacex.
+WIP
 
-
-![raptor](images/portfolio/raptor.jpg)  
+![raptor](images/portfolio/iot/iot.png)  

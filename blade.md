@@ -25,4 +25,4 @@ The blade in experimentation generated a maximum of 3.98 W at a wind speed of 4.
 The team successfully designed the blade around the goal of maximizing power output through optimizing chord length and pitch angle. Experimentally, the blade generated a maximum power output of 3.98 W at 4.8 m/s and 1570 RPM, and the blades did not catastrophically fail during data collection. The team ultimately worked well together, with each member taking on responsibilities that aligned with their strengths. Future work includes improving data collection by including a more robust RPM sweep and updating blade parameters to better reflect the experimental rotation rate of 1570 RPM. 
 
 # Full Report
-📄 **[Blade Design Report (PDF)](\Blade Project Final Report.pdf")**
+[Blade Design Report (PDF)](\Blade Project Final Report.pdf")
