@@ -61,9 +61,6 @@ gallery4:
 
 ---
 
-## Let me introduce myself
-I am a UG Senior/Early MEng student at Cornell University studying Mechanical Engineering. Outside of the classroom, I spent time with CEV and I like rock climbing.
-
 ## Lab Reports
 {% include gallery caption="Labs 1-3." %}
 {% include gallery id="gallery2" caption="Labs 4-6." %}
