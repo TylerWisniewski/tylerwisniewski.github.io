@@ -5,7 +5,7 @@ permalink: /spacex/
 excerpt: "SpaceX Internship"
 author_profile: true
 ---
-*Non-Disclosure Agreement: I will only disclose non-proprietary information regarding my work at General Motors. All images are public knowledge.*
+*Non-Disclosure Agreement: I will only disclose non-proprietary information regarding my work at SpaceX. All images are public knowledge.*
 ![raptor](images/portfolio/raptor.jpg)  
 
 I worked at SpaceX as a Graduate Propulsion Manufacturing Engineer from May 2025 to August 2025. I was a member of the Raptor Foundry Team, which creates all the cast parts for the Starship Raptor Rocket Engines. My work involved designing and manufacturing hardware and tooling for the production of Investment Cast Raptor rocket engine parts.
