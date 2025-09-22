@@ -233,6 +233,6 @@ ble.send_command(
 
 
 ## Acknowledgements
-I worked alone on this lab, but I am incredibly thankful to the support of the TAs and course staff. Throughout the semester, I got help from Kelvin Resch, Rachel Arena, and Selena Yao. I also referenced Nila Narayan's and Bhadja Bejoy's past course websites for inspiration or aide when I was stuck or lost. There sites were done very well.
+I worked alone on this lab, but I am incredibly thankful to the support of the TAs and course staff. Throughout the semester, I got help from Kelvin Resch, Rachel Arena, and Selena Yao. I also referenced Nila Narayan's and Bhadja Bejoy's past course websites for inspiration or aide when I was stuck or lost. Their sites were done very well.
 
 This class was much more work than anticipated, but worthwhile. One of the hardest classes I've taken here, but it was fun and I learned a ton. Would reccomend to future engineering students. 
