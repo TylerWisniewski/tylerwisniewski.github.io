@@ -40,6 +40,3 @@ I'm very active on campus participating in the following organizations on campus
 
 ## Other stuff I like to do
 snowboard, surf, read, rock climbing, and other stuff. Right now I'm reading the Dune Series (book 4) and absolutely loving it!
-
-
-test: <small>(small text)</small>
