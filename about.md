@@ -10,23 +10,10 @@ toc: true
 
 ## Who am I?
 
- 				<p class="lead">
-            My dad was a carpenter and I spent most weekends through highschool working with him installing windows, hauling drywall, building decks, 
-            and any other number of odd jobs from week to week. As a result, I've developed a strong work ethic and a passion for building with the
-            tools to make my visions a reality. I was already so used to thinking about how different parts of a physical system work together so 
-            Mechanical Engineering seemed like the obvious choice for me and I've absoultely love it! 
-          </p>
-   				<p class="lead">I particularly love using engineering as a method to explore other areas of interest, too. Of course, I've learned how to think 
-            and solve problems through my engineering coursework and practical experience through my project team and internships, but I've also learned 
-            about seabed topography and whale physiology while designing surfboard fins, the importance of safety system controls while
-            working on a nuclear fusion reactor simulation, and I've internalized more about Force and Moment balances while rock climbing than the 
-            thousands of hours I've spent grinding through problem sets.
-          </p>
-   				<p class="lead">I've found that my exploring other interests using engineering projects as a 
-            medium for exploration has led to some of my most rewarding experiences and I've found parallels and connections between seemingly disparate fields 
-            that I could have gone my whole life without ever noticing. This has been so much fun so far and I intend to keep exploring this way for the rest of my life. 
-            Doing this for a living still feels surreal sometimes, but I love it and I can't wait to see where it takes me. 
-          </p>
+
+My dad was a carpenter and I spent most weekends through highschool working with him installing windows, hauling drywall, building decks, and any other number of odd jobs from week to week. As a result, I've developed a strong work ethic and a passion for building with the tools to make my visions a reality. I was already so used to thinking about how different parts of a physical system work together so Mechanical Engineering seemed like the obvious choice for me and I've absoultely love it! 
+I particularly love using engineering as a method to explore other areas of interest, too. Of course, I've learned how to think and solve problems through my engineering coursework and practical experience through my project team and internships, but I've also learned about seabed topography and whale physiology while designing surfboard fins, the importance of safety system controls whileworking on a nuclear fusion reactor simulation, and I've internalized more about Force and Moment balances while rock climbing than the thousands of hours I've spent grinding through problem sets.
+I've found that my exploring other interests using engineering projects as a medium for exploration has led to some of my most rewarding experiences and I've found parallels and connections between seemingly disparate fields that I could have gone my whole life without ever noticing. This has been so much fun so far and I intend to keep exploring this way for the rest of my life. Doing this for a living still feels surreal sometimes, but I love it and I can't wait to see where it takes me. 
 
 
 ## Campus Involvements
