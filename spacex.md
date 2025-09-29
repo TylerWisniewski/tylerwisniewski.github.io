@@ -8,9 +8,21 @@ author_profile: true
 *Non-Disclosure Agreement: I will only disclose non-proprietary information regarding my work at SpaceX. All images are public knowledge.*
 ![raptor](images/portfolio/raptor.jpg)  
 
-I worked at SpaceX as a Graduate Propulsion Manufacturing Engineer from May 2025 to August 2025. I was a member of the Raptor Foundry Team, which creates all the cast parts for the Starship Raptor Rocket Engines. My work involved designing and manufacturing hardware and tooling for the production of Investment Cast Raptor rocket engine parts.
+As a member of the Raptor Foundry Team, I developed manufacturing hardware and tooling for investment cast components used in Starship's Raptor rocket engines.
 
-For Investment Cast parts manufacturing, one needs to print a pattern upon which the ceramic mold will be made around. My main project was designing and manufacturing an Electro-Mechanical Pattern Transfer Cart to move these patterns around the Print Lab to various work stations as they are be prepared for shelling. The patterns are big, heavy, and coated in toxic resin so moving these around safely, effectively, and qiickly is critical to meeting production targets. I implemented this new cart to replace four existing specialized, but limited carts, and integrated it seamlessly into production with zero downtime. This improved the Foundry Print Lab's pattern offload and throughput speed by over 50%, which will save the company over $30,000 per year in technician labor.
+## Key Projects & Accomplishments:
 
-Additionally, I did some Build Reliabilty Engineering work examining, analyzing, and clearing nearly 100 flagged Raptor V2 Engines using Polyworks and Ansys to validate part thicknesses, ultimately clearing them for flight. This work helped push us to a very succesful Flight 10 and (hopefully; finges crossed) successful Flight 11 and 12 launches in the coming months. 
+### Electro-Mechanical Pattern Transfer Cart:
+
+- Engineered and implemented a novel electro-mechanical cart to transport large, heavy, and resin-coated patterns within the Foundry Print Lab.
+
+- Consolidated the function of four specialized carts into a single, more efficient system, which was integrated into the production line with zero downtime.
+
+- This new system significantly improved the pattern offload and throughput speed, leading to substantial annual labor cost savings and helping the team meet critical production targets.
+
+### Build Reliability Engineering:
+
+- Analyzed and dispositioned a high volume of flagged Raptor V2 engines, using Polyworks for inspection and Ansys for structural validation of part thicknesses.
+
+- My analysis helped clear numerous engines for flight, contributing to the hardware readiness for successful Starship launches.
 
