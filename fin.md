@@ -17,7 +17,7 @@ gallery:
 
 ## What is Wiski Fins?
 
-Initially a gift for my younger brother, I optimized surfboard fins for his size, weight, and existing surfboards. I then improved hydrodynamic efficiency during turning through the use of CFD and Structural FEA analysis and manufactured the fins using the Forged Carbon Fiber manufacturing process. Eventually, my brother and I created **Wiski Fins**, started selling fins to friends, and are now in negotiations with local surf shops. So far, we've sold 12 sets of fins at $69 each, generating over $800 in revenue and $500 in profit!
+Initially a gift for my younger brother, I optimized surfboard fins for his size, weight, and existing surfboards. I then improved hydrodynamic efficiency during turning through the use of CFD and Structural FEA analysis and manufactured the fins using the Forged Carbon Fiber manufacturing process. Eventually, my brother and I created **Wiski Fins**, started selling fins to friends, and are now in negotiations with local surf shops.
 
 ---
 
