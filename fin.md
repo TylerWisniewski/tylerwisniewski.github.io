@@ -20,7 +20,7 @@ This project aimed to democratize high-performance surf equipment by designing a
 
 Key Results:
 - Cost Reduction: Produced for **$11.16/set** (vs. $150+ market rate).
-- Performance: Validated Safety Factor of 1.73 under hydrodynamic loads.
+- Performance: Validated Margin of Safety of 1.73 under hydrodynamic loads.
 - Material Strength: Achieved tensile yield strength of 358 MPa (exceeding industry baseline).
 
-📄 **[See Full Report Here](https://tylerwisniewski.github.io/images/portfolio/mechatronics/Mechatronics%20Final%20Report.pdf)**
+📄 **[See Full Report Here](https://tylerwisniewski.github.io/MEng_Report.pdf)**
