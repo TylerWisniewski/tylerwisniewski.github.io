@@ -10,9 +10,9 @@ toc_label: "Unique Title"
 toc_icon: "heart"
 
 ---
-Cornell Electric Vehicles (CEV) is a student-run team building autonomous, hyper-efficient electric cars. We operated like a startup to produce industry-grade vehicles.
+Cornell Electric Vehicles (CEV) is a student-run team dedicated to building autonomous, hyper-efficient electric cars. We operated with the agility of a startup to produce industry-grade vehicles.
 
-We placed highly at Shell Eco-Marathon Americas and pushed the limits of emergent tech, specifically working to integrate level 2 autonomy to keep the team on the bleeding edge.
+We placed highly at Shell Eco-Marathon Americas and worked at the limits of emergent technology. We focused on integrating Level 2 autonomy into our vehicles to keep the team at the leading edge of innovation.
 
 Our team's website is [https://www.cornellelectricvehicles.org/](https://www.cornellelectricvehicles.org/).
 
@@ -23,15 +23,15 @@ Our team's website is [https://www.cornellelectricvehicles.org/](https://www.cor
 
 ### Leadership Responsibilities
 
-As the Full Team Lead, I acted as the connection point between the university and our 65+ students. My main goal was removing blockers so the team could build.
+As the Full Team Lead, I served as the primary liaison between the university administration and our 65+ members. My objective was to remove administrative blockers to enable the engineering team to execute.
 
-I handled the "fighting for resources" that happens in a university environment. I argued our case to the administration and overhauled our fundraising strategy. This led to us breaking the team record for Giving Day, raising over $12k and securing the highest number of individual donors of any project team. I also pushed for budget increases to handle supply chain tariffs and tooling costs, ensuring we had the cash to execute our designs.
+I managed the team's resource advocacy within the university system. I overhauled our fundraising strategy and presented our case to the administration, which resulted in breaking the team record for Giving Day. We raised over $12k and secured the highest number of individual donors of any project team. I also negotiated budget increases to mitigate supply chain tariffs and tooling costs, ensuring we had the capital to execute our designs.
 
-I realized our alumni relations were trash, so I personally conducted over 20 hour-long interviews with past leads to rebuild those bridges. This led to our first real Alumni Design Reviews, where industry veterans gave us the technical feedback we actually needed.
+Recognizing that our alumni network was underutilized, I personally conducted over 20 in-depth interviews with past leads to regain institutional knowledge. This initiative led to our first Alumni Design Reviews, where industry veterans provided critical technical feedback on our current systems.
 
-Internally, I tried to cut the bureaucracy. "Hour logs" were working poorly, so I pushed the team toward project-based "work logs" to focus on output rather than just time spent. I managed the friction that comes with high-stress builds, mediating conflicts between subteams so the engineers could focus on the car.
+Internally, I shifted the management structure from time-based "hour logs" to project-based "work logs" to prioritize concrete output over attendance. I managed the friction inherent in high-stress build cycles and mediated cross-functional conflicts to keep the team focused on the vehicle.
 
-In addition to leading, I stayed hands-on. I completed my Senior Design for CEV and maintained my status as a "Blue Apron" (the highest level of Machining Mastery at Cornell). I logged 200+ hours in the shop as the team's most senior machinist.
+Beyond leadership, I remained technically active. I completed my Senior Design for CEV and maintained my status as a "Blue Apron," the highest level of machining certification at Cornell. I logged over 200 hours in the shop as the team's most senior machinist.
 
 ![Technical Inspection](images/portfolio/cev/comp_tech.JPG)  
 *A photo of me and some team members with the car before heading into (and Passing!) technical inspection at the Shell Eco Marathon.*
@@ -41,14 +41,14 @@ In addition to leading, I stayed hands-on. I completed my Senior Design for CEV 
 ![Chassis Surface Model](images/portfolio/cev/aero.jpg)  
 *Chassis Surface Model for UC24*
 
-As Chassis Lead, I oversaw the manufacturing of the Monocoque and Aerodynamic Chassis for the UC24 vehicle. I also led the Aerodynamic and Structural Design of the UC25 Chassis.
+As Chassis Lead, I directed the manufacturing of the Monocoque and Aerodynamic Chassis components for the UC24 vehicle. I also led the Aerodynamic and Structural Design of the UC25 Chassis.
 
-We designed the UC24 Model in Autodesk Inventor, but for the UC25, I switched us to Autodesk Alias. It’s a top-tier automotive program that let us handle surface modeling much better. I used an iterative design process and analyzed aerodynamic performance with Ansys Fluent CFD to reduce drag by 6%. I also altered parts to make them easier to manufacture and created specific surfaces for autonomous sensor mounting. We validated the structure using Ansys ACP and Mechanical.
+We designed the UC24 Model in Autodesk Inventor. For the UC25, I transitioned the team to Autodesk Alias. This automotive-grade software significantly improved our surface modeling capabilities. I utilized an iterative design process and analyzed aerodynamic performance with Ansys Fluent CFD  to reduce drag by 6%. I optimized the component geometry to improve manufacturability and accommodate autonomous sensor integration. We validated the structural integrity using Ansys ACP and Mechanical.
 
 ![UC24 Chassis Assembly](images/portfolio/cev/chassis.jpg)  
 *UC24 Chassis Assembly*
 
-Dr. Bhaskaran was impressed by my CFD work for CEV. He reworked the MAE 5230: Intermediate Fluid Dynamics final project to use a simplified version of my design process for the UC25.
+Dr. Bhaskaran integrated my CFD workflow into the MAE 5230 curriculum. He used a simplified version of my UC25 design process as a teaching case study for the Intermediate Fluid Dynamics course.
 
 ![UC25 CFD Analysis: Pressure Contours](images/portfolio/cev/pressure.png)  
 *UC25 CFD Analysis: Pressure Contours*
@@ -59,9 +59,9 @@ Dr. Bhaskaran was impressed by my CFD work for CEV. He reworked the MAE 5230: In
 ![UC25 CFD Analysis: Flow Visualization](images/portfolio/cev/flow_viz.png)  
 *UC25 CFD Analysis: Flow Visualization*
 
-We moved fast on manufacturing. We prepared our Baseplate Mold for vacuum infusion in October and finished our Bulkhead in November. We manufactured all of our aerodynamic parts during our winter break (JANFAB).
+We executed an aggressive manufacturing timeline. We prepared the Baseplate Mold for vacuum infusion  in October and completed the Bulkhead in November. We manufactured the aerodynamic suite during our winter intensive (JANFAB).
 
-We used lessons from previous cycles to significantly reduce part weight. This cut our material costs and gave us a much higher quality surface finish for the UC25 parts.
+We applied data from previous cycles to significantly reduce part weight. This lowered material costs and resulted in a superior surface finish for the UC25 components.
 
 ### Miscellaneous
 
@@ -71,17 +71,23 @@ We used lessons from previous cycles to significantly reduce part weight. This c
 ![upright](images/portfolio/cev/upright.JPG)  
 *Steering Upright*
 
-![Sprockets Manufacturing](images/portfolio/cev/sprocket_cnc.jpg)  
-*I was the first to design and manufacture sprockets on our team.*
-
-![The Baby Boy](images/portfolio/cev/baby.jpg)  
-*The Baby Boy*
-
 ![Comp Waffle House Tradition](images/portfolio/cev/comp_wafflehouse.jpg)  
 *Maintaining the Comp Waffle House Tradition*
+
+![Bop](images/portfolio/cev/bop.gif)  
+*This is Bop. He was an unofficial team mascot.*
+
+![Bop Haas](images/portfolio/cev/bop_haas.jpg)  
+*I loved him.*
 
 ![Frog Mode drivetrain assembly](images/portfolio/cev/frog.jpg)  
 *Frog Mode drivetrain assembly!*
 
 ![Ripstick Photographer](images/portfolio/cev/cam.jpg)  
 *I held the position of Primary Ripstick Photographer on the team!*
+
+![Sprockets Manufacturing](images/portfolio/cev/sprocket_cnc.jpg)  
+*I was the first to design and manufacture sprockets on our team.*
+
+![The Baby Boy](images/portfolio/cev/baby.jpg)  
+*The Baby Boy*
