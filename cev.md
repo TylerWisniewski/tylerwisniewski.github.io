@@ -25,7 +25,9 @@ Our team's website is [https://www.cornellelectricvehicles.org/](https://www.cor
 
 As the Full Team Lead, I served as the primary liaison between the university administration and our 65+ members. My objective was to remove administrative blockers to enable the engineering team to execute.
 
-I managed the team's resource advocacy within the university system. I overhauled our fundraising strategy and presented our case to the administration, which resulted in breaking the team record for Giving Day. We raised over $12k and secured the highest number of individual donors of any project team. I also negotiated budget increases to mitigate supply chain tariffs and tooling costs, ensuring we had the capital to execute our designs.
+I fundamentally shifted our engineering culture to prioritize testing. We set an aggressive "First Drive" deadline of February 9th—a rapid pace for a scratch build considering academic breaks and exams. To mitigate historic failure points, such as motor controller reliability, I tripled the engineering allocation on critical systems (scaling from one to three engineers in parallel) and mandated benchtop dyno testing  prior to integration. This approach compressed our design loop from a yearly cycle to a weekly one. It allowed us to "build, test, break, and fix" in the shop, rather than driving for the first time at competition and watching components fail. This strategy resulted in the team's first-ever fully functional Urban Concept car and fantastic results at competition.
+
+I also managed the team's resource advocacy. I overhauled our fundraising strategy and presented our case to the administration, which resulted in breaking the team record for Giving Day. We raised over $12k and secured the highest number of individual donors of any project team. I negotiated budget increases to mitigate supply chain tariffs and tooling costs, ensuring we had the capital to execute our designs.
 
 Recognizing that our alumni network was underutilized, I personally conducted over 20 in-depth interviews with past leads to regain institutional knowledge. This initiative led to our first Alumni Design Reviews, where industry veterans provided critical technical feedback on our current systems.
 
@@ -71,23 +73,17 @@ We applied data from previous cycles to significantly reduce part weight. This l
 ![upright](images/portfolio/cev/upright.JPG)  
 *Steering Upright*
 
-![Comp Waffle House Tradition](images/portfolio/cev/comp_wafflehouse.jpg)  
-*Maintaining the Comp Waffle House Tradition*
-
-![Bop](images/portfolio/cev/bop.gif)  
-*This is Bop. He was an unofficial team mascot.*
-
-![Bop Haas](images/portfolio/cev/bop_haas.jpg)  
-*I loved him.*
-
-![Frog Mode drivetrain assembly](images/portfolio/cev/frog.jpg)  
-*Frog Mode drivetrain assembly!*
-
-![Ripstick Photographer](images/portfolio/cev/cam.jpg)  
-*I held the position of Primary Ripstick Photographer on the team!*
-
 ![Sprockets Manufacturing](images/portfolio/cev/sprocket_cnc.jpg)  
 *I was the first to design and manufacture sprockets on our team.*
 
 ![The Baby Boy](images/portfolio/cev/baby.jpg)  
 *The Baby Boy*
+
+![Comp Waffle House Tradition](images/portfolio/cev/comp_wafflehouse.jpg)  
+*Maintaining the Comp Waffle House Tradition*
+
+![Frog Mode drivetrain assembly](images/portfolio/cev/frog.jpg)  
+*Frog Mode drivetrain assembly!*
+
+![Ripstick Photographer](images/portfolio/cev/cam.jpg)  
+*I held the illustrous position of Primary Ripstick Photographer on the team!*
