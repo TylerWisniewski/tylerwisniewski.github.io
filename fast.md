@@ -60,6 +60,7 @@ gallery4:
     title: "lab 12"
 
 ---
+In MAE 5190: Fast Robots, I engineered a platform capable of mapping and navigating constrained environments at high speeds. Because the hardware constraints caused significant sensor latency, I couldn't rely on raw data alone. I wrote the core navigation firmware in C, using a Kalman Filter to blend noisy Time-of-Flight ranges with snappy 9-DoF IMU data. This allowed the robot to maintain accurate localization even when the time of flight scans were lagging. I verified the system performance using Python to analyze run data and optimize the control algorithms.
 
 ## Lab Reports
 {% include gallery caption="Labs 1-3." %}

@@ -33,7 +33,7 @@ I also fought for the resources we needed. I reworked our fundraising pitch and 
 
 To fix our "brain drain," I personally interviewed 20+ past leads to recover lost institutional knowledge. This led to our first Alumni Design Reviews, getting us critical feedback from industry veterans. Internally, I switched us from "hour logs" to project-based "work logs" to measure output rather than time spent in the lab.
 
-Beyond leadership, I stayed in the weeds. I completed my Senior Design for CEV and maintained my status as a "Blue Apron" (Cornell's highest machining certification). I've logged 200+ hours in the shop as the team's most senior machinist.
+Beyond leadership, I stayed in the weeds. I completed my Senior Design for CEV and maintained my status as a "Blue Apron" (Cornell's highest machining certification). I've logged 250+ hours in the shop as the team's most senior machinist.
 
 ![Technical Inspection](images/portfolio/cev/comp_tech.JPG)  
 *A photo of me and the car after passing technical inspection at the Shell Eco Marathon.*
