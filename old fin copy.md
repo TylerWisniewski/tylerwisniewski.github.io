@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: "Carbon Fiber Fins"
-permalink: /fin/
+permalink: /old fin/
 excerpt: "I designed and manufactured my own Carbon Fiber Surfboard Fins as a gift for my little brother"
 author_profile: true
 gallery:
@@ -15,7 +15,7 @@ gallery:
           title: "Mold Close"
 ---
 
-
+# This is an old project and I'm not happy with it. Thus is I reworked things on my new fin page
 Initially a gift for my younger brother, I optimized surfboard fins for his size, weight, and existing surfboards. I then improved hydrodynamic efficiency during turning through the use of CFD and Structural FEA analysis and manufactured the fins using the Forged Carbon Fiber manufacturing process. Now I've made several sets and have sold some to friends/mutuals. Me and my brother are now trying to sell more through some local surf shops. 
 
 ---
